@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2115747560",
+    "project_id": "chefroad-14de0",
+    "storage_bucket": "chefroad-14de0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2115747560:android:97e045cc649ecc4279d35d",
+        "android_client_info": {
+          "package_name": "com.example.chefroad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADg-S7lw8wm1-onJz2iawHhFEx7JsqDrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
