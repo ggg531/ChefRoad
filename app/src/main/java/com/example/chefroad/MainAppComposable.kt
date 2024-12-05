@@ -49,7 +49,7 @@ fun MainApp() {
                 composable(route = "signup") {
                     SignUpScreen(navController = navController)
                 }
-                composable(route = "tvshow") { // 추가된 TvShowScreen 경로
+                composable(route = "tvshow") { 
                     TvShowScreen(navController = navController)
                 }
                 composable(route = "home") {

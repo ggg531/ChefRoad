@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.navigation.NavController
-import com.example.chefroad.R // 패키지에 맞게 수정하세요
+import com.example.chefroad.R
 
 @Composable
 fun TvShowScreen(navController: NavController) {
@@ -28,19 +28,19 @@ fun TvShowScreen(navController: NavController) {
     ) {
         Spacer(modifier = Modifier.height(16.dp))
 
-        // 상단 버튼
+        // 흑백요리사 버튼
         TvShowButton("흑백요리사", R.drawable.blackwhite_logo) {
-            navController.navigate("home") // 버튼 클릭 시 HomeScreen으로 이동
+            navController.navigate("home")
         }
 
-        // 중간 버튼
+        // 수요미식회버튼
         TvShowButton("수요미식회", R.drawable.wednesday_logo) {
-            navController.navigate("home") // 버튼 클릭 시 HomeScreen으로 이동
+            navController.navigate("home")
         }
 
-        // 하단 버튼
+        // 줄서는식당 버튼
         TvShowButton("줄서는식당", R.drawable.lineup_logo) {
-            navController.navigate("home") // 버튼 클릭 시 HomeScreen으로 이동
+            navController.navigate("home")
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -50,7 +50,7 @@ fun TvShowScreen(navController: NavController) {
 @Composable
 fun TvShowButton(text: String, imageRes: Int, onClick: () -> Unit) {
     Button(
-        onClick = onClick, // 버튼 클릭 이벤트
+        onClick = onClick,
         modifier = Modifier
             .fillMaxWidth()
             .height(200.dp)

@@ -62,7 +62,7 @@ fun SignUpScreen(navController: NavController) {
     LaunchedEffect(key1 = uiState.value) {
         when(uiState.value) {
             is SignUpState.Success -> {
-                navController.navigate("tvshow") { // 방송 페이지로 이동
+                navController.navigate("tvshow") {
                     popUpTo("signin") { inclusive = true }
                     popUpTo("signup") { inclusive = true }
                 }
