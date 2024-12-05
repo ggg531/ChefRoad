@@ -29,18 +29,18 @@ fun TvShowScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(16.dp))
 
         // 흑백요리사 버튼
-        TvShowButton("흑백요리사", R.drawable.blackwhite_logo) {
-            navController.navigate("home")
+        TvShowButton("흑백요리사", R.drawable.blackwhite_logo,) {
+            navController.navigate("filter")
         }
 
         // 수요미식회버튼
         TvShowButton("수요미식회", R.drawable.wednesday_logo) {
-            navController.navigate("home")
+            navController.navigate("filter")
         }
 
         // 줄서는식당 버튼
         TvShowButton("줄서는식당", R.drawable.lineup_logo) {
-            navController.navigate("home")
+            navController.navigate("filter")
         }
 
         Spacer(modifier = Modifier.height(16.dp))

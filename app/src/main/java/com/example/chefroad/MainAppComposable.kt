@@ -13,7 +13,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.chefroad.feature.auth.signin.SignInScreen
 import com.example.chefroad.feature.auth.signup.SignUpScreen
-import com.example.chefroad.feature.home.HomeScreen
 import com.example.chefroad.feature.map.MapScreen
 import com.example.chefroad.feature.my.MyScreen
 import com.example.chefroad.feature.restaurant.FilterScreen
@@ -51,10 +50,10 @@ fun MainApp() {
                     SignUpScreen(navController = navController)
                 }
                 composable(route = "tvshow") { 
-                    TvShowScreen(navController = navController)
+                    TvShowScreen(navController = navController) // 수정 필요
                 }
                 composable(route = "home") {
-                    HomeScreen(navController = navController)
+                    TvShowScreen(navController = navController) // 수정 필요
                 }
                 composable("restaurant") {
                     RestaurantScreen(navController = navController)
