@@ -17,6 +17,7 @@ import com.example.chefroad.feature.home.HomeScreen
 import com.example.chefroad.feature.map.MapScreen
 import com.example.chefroad.feature.my.MyScreen
 import com.example.chefroad.feature.restaurant.FilterScreen
+import com.example.chefroad.feature.tvshow.TvShowScreen
 import com.example.chefroad.ui.BottomBar
 import com.example.chefroad.ui.SplashScreen
 
@@ -47,6 +48,9 @@ fun MainApp() {
                 }
                 composable(route = "signup") {
                     SignUpScreen(navController = navController)
+                }
+                composable(route = "tvshow") { // 추가된 TvShowScreen 경로
+                    TvShowScreen(navController = navController)
                 }
                 composable(route = "home") {
                     HomeScreen(navController = navController)
