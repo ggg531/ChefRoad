@@ -56,6 +56,8 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
+        RestaurantScreen(navController)
+
         IconButton(
             onClick = { isFilterVisible = !isFilterVisible },
             modifier = Modifier.align(Alignment.TopEnd)
@@ -119,15 +121,14 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
 
                 Text(
                     text = "필터링",
-                    style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
+                    style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
-            Spacer(modifier = Modifier.height(2.dp))
             Divider(color = DarkGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
 
-            Text(text = "음식 종류", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
+            Text(text = "음식 종류", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
             val groupedFoodTypes = foodTypes.chunked(3)
 
@@ -156,7 +157,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                         selectedFoodTypes.value + foodType
                                     }
                                 }
-                                .padding(vertical = 14.dp),
+                                .padding(vertical = 12.dp),
                             contentAlignment = Alignment.Center,
                         ) {
                             Text(
@@ -172,7 +173,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             Spacer(modifier = Modifier.height(12.dp))
             Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
-            Text(text = "식당 유형", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
+            Text(text = "식당 유형", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -198,7 +199,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                     selectedResTypes.value + resType
                                 }
                             }
-                            .padding(vertical = 14.dp),
+                            .padding(vertical = 12.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -212,7 +213,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             Spacer(modifier = Modifier.height(12.dp))
             Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
-            Text(text = "금액 (메인 메뉴 기준)", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
+            Text(text = "금액 (메인 메뉴 기준)", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
             val groupedMoneyRanges = moneyRanges.chunked(2)
 
@@ -241,7 +242,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                         selectedMoneyRanges.value + moneyRange
                                     }
                                 }
-                                .padding(vertical = 14.dp),
+                                .padding(vertical = 12.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -257,7 +258,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             Spacer(modifier = Modifier.height(12.dp))
             Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
-            Text(text = "알레르기", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
+            Text(text = "알레르기", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -283,7 +284,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                     selectedAllergyTypes.value + allergyType
                                 }
                             }
-                            .padding(vertical = 14.dp),
+                            .padding(vertical = 12.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
