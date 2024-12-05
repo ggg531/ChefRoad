@@ -58,6 +58,9 @@ fun MainApp() {
                 composable("restaurant") {
                     RestaurantScreen(navController = navController)
                 }
+                composable("restaurant") {
+                    RestaurantScreen(navController = navController)
+                }
                 composable("filter") {
                     FilterScreen(navController = navController)
                 }
