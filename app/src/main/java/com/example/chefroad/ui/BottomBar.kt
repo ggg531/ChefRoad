@@ -1,7 +1,5 @@
 package com.example.chefroad.ui
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -15,11 +13,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.chefroad.ui.theme.DarkGray
-import com.example.chefroad.ui.theme.Purple1
 import com.example.chefroad.ui.theme.Purple2
-import com.example.chefroad.ui.theme.Purple3
 import com.example.chefroad.ui.theme.Purple4
-import com.example.chefroad.ui.theme.Purple5
 
 @Composable
 fun BottomBar(navController: NavHostController) {

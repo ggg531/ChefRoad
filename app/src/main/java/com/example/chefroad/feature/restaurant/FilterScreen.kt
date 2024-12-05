@@ -18,12 +18,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -53,15 +56,14 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
-        Button(
+        IconButton(
             onClick = { isFilterVisible = !isFilterVisible },
-            modifier = Modifier.align(Alignment.TopEnd),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Purple2,
-                contentColor = Color.White,
-            )
+            modifier = Modifier.align(Alignment.TopEnd)
         ) {
-            Text("필터 아이콘") // menu icon으로 수정 (TOPBAR 고정)
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.List,
+                contentDescription = "filter",
+            )
         }
 
         AnimatedVisibility(
@@ -84,7 +86,7 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
 
 @Composable
 fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit) {
-    val foodTypes = listOf("한식", "양식", "중식", "일식", "베이커리")
+    val foodTypes = listOf("한식", "양식", "중식", "일식", "비건", "베이커리")
     val resTypes = listOf("뷔페", "파인다이닝", "캐주얼다이닝")
     val moneyRanges= listOf("10,000원~20,000원", "20,000원~30,000원", "30,000원~40,000원", "40,000원~")
     val allergyTypes = listOf("달걀", "우유", "땅콩", "생선", "조개")
@@ -95,7 +97,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
     val selectedAllergyTypes = remember { mutableStateOf<Set<String>>(setOf()) }
 
     Surface(
-        modifier = Modifier.fillMaxWidth().height(820.dp).padding(16.dp), // 필터 아이콘 보이게 조정 필요
+        modifier = Modifier.fillMaxWidth().height(820.dp).padding(16.dp),
         color = MaterialTheme.colorScheme.surface,
         shadowElevation = 8.dp,
         shape = RoundedCornerShape(16.dp)
@@ -121,45 +123,54 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(2.dp))
+            Divider(color = DarkGray, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(12.dp))
 
             Text(text = "음식 종류", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                foodTypes.forEach { foodType ->
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .background(
-                                if (selectedFoodTypes.value.contains(foodType)) Purple1 else Color.White,
-                                shape = RoundedCornerShape(8.dp)
-                            )
-                            .border(
-                                width = 1.dp,
-                                color = Purple1,
-                                shape = RoundedCornerShape(8.dp)
-                            )
-                            .clickable {
-                                selectedFoodTypes.value = if (selectedFoodTypes.value.contains(foodType)) {
-                                    selectedFoodTypes.value - foodType
-                                } else {
-                                    selectedFoodTypes.value + foodType
+            val groupedFoodTypes = foodTypes.chunked(3)
+
+            groupedFoodTypes.forEach { group ->
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    group.forEach { foodType ->
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .background(
+                                    if (selectedFoodTypes.value.contains(foodType)) Purple1 else Color.White,
+                                    shape = RoundedCornerShape(8.dp)
+                                )
+                                .border(
+                                    width = 1.dp,
+                                    color = Purple1,
+                                    shape = RoundedCornerShape(8.dp)
+                                )
+                                .clickable {
+                                    selectedFoodTypes.value = if (selectedFoodTypes.value.contains(foodType)) {
+                                        selectedFoodTypes.value - foodType
+                                    } else {
+                                        selectedFoodTypes.value + foodType
+                                    }
                                 }
-                            }
-                            .padding(vertical = 16.dp),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Text(
-                            text = foodType,
-                            color = if (selectedFoodTypes.value.contains(foodType)) Color.White else DarkGray
-                        )
+                                .padding(vertical = 14.dp),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(
+                                text = foodType,
+                                color = if (selectedFoodTypes.value.contains(foodType)) Color.White else DarkGray
+                            )
+                        }
                     }
                 }
+                Spacer(modifier = Modifier.height(6.dp))
             }
 
+            Spacer(modifier = Modifier.height(12.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "식당 유형", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
@@ -187,7 +198,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                     selectedResTypes.value + resType
                                 }
                             }
-                            .padding(vertical = 16.dp),
+                            .padding(vertical = 14.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -198,6 +209,8 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                 }
             }
 
+            Spacer(modifier = Modifier.height(12.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "금액 (메인 메뉴 기준)", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
@@ -228,7 +241,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                         selectedMoneyRanges.value + moneyRange
                                     }
                                 }
-                                .padding(vertical = 16.dp),
+                                .padding(vertical = 14.dp),
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
@@ -238,9 +251,11 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                         }
                     }
                 }
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(6.dp))
             }
 
+            Spacer(modifier = Modifier.height(12.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "알레르기", style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
@@ -268,7 +283,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                                     selectedAllergyTypes.value + allergyType
                                 }
                             }
-                            .padding(vertical = 16.dp),
+                            .padding(vertical = 14.dp),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -327,48 +342,6 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                             selectedMoneyRanges.value.isNotEmpty() ||
                             selectedAllergyTypes.value.isNotEmpty()
                         ) Color.White else Color.Gray
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun DropdownSelector(
-    label: String,
-    options: List<String>,
-    selectedOption: String?,
-    onOptionSelected: (String?) -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
-    var selected by remember { mutableStateOf(selectedOption) }
-
-    Column {
-        Text(text = label)
-        Spacer(modifier = Modifier.height(8.dp))
-        Box {
-            OutlinedTextField(
-                value = selected ?: "",
-                onValueChange = {},
-                readOnly = true,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { expanded = true },
-                label = { Text(text = label) }
-            )
-            DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false }
-            ) {
-                options.forEach { option ->
-                    DropdownMenuItem(
-                        text = { Text(option) },
-                        onClick = {
-                            selected = option
-                            onOptionSelected(option)
-                            expanded = false
-                        }
                     )
                 }
             }

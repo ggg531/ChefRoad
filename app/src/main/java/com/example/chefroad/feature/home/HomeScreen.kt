@@ -1,7 +1,6 @@
 package com.example.chefroad.feature.home
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -23,7 +22,7 @@ import com.example.chefroad.feature.restaurant.FilterState
 import com.example.chefroad.ui.theme.Purple2
 
 @Composable
-fun HomeScreen(navController: NavController) { // 채널 페이지
+fun HomeScreen(navController: NavController) { // 채널 페이지 (식당 페이지 연동 후 지우기)
     Text(text = "채널 페이지")
     var filters by remember { mutableStateOf(FilterState()) }
 
@@ -40,7 +39,7 @@ fun HomeScreen(navController: NavController) { // 채널 페이지
                 contentColor = Color.White,
             )
         ) {
-            Text("방송 채널 선택") // menu icon으로 수정 (TOPBAR 고정)
+            Text("방송 채널 선택")
         }
     }
 

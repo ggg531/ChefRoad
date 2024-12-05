@@ -7,7 +7,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -18,7 +17,6 @@ import com.example.chefroad.feature.home.HomeScreen
 import com.example.chefroad.feature.map.MapScreen
 import com.example.chefroad.feature.my.MyScreen
 import com.example.chefroad.feature.restaurant.FilterScreen
-import com.example.chefroad.feature.restaurant.FilterViewModel
 import com.example.chefroad.ui.BottomBar
 import com.example.chefroad.ui.SplashScreen
 
