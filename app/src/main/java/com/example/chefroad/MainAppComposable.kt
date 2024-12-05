@@ -17,6 +17,7 @@ import com.example.chefroad.feature.home.HomeScreen
 import com.example.chefroad.feature.map.MapScreen
 import com.example.chefroad.feature.my.MyScreen
 import com.example.chefroad.feature.restaurant.FilterScreen
+import com.example.chefroad.feature.restaurant.RestaurantScreen
 import com.example.chefroad.feature.tvshow.TvShowScreen
 import com.example.chefroad.ui.BottomBar
 import com.example.chefroad.ui.SplashScreen
@@ -31,7 +32,7 @@ fun MainApp() {
 
         Scaffold(
             bottomBar = {
-                if (currentRoute in listOf("home", "map", "my")) {
+                if (currentRoute in listOf("home", "map", "filter", "my")) {
                     BottomBar(navController = navController)
                 }
             }
@@ -54,6 +55,9 @@ fun MainApp() {
                 }
                 composable(route = "home") {
                     HomeScreen(navController = navController)
+                }
+                composable("restaurant") {
+                    RestaurantScreen(navController = navController)
                 }
                 composable("filter") {
                     FilterScreen(navController = navController)
