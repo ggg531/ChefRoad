@@ -1,4 +1,4 @@
-package com.example.chefroad.feature.tvshow
+package com.example.chefroad.feature.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -18,7 +18,7 @@ import androidx.navigation.NavController
 import com.example.chefroad.R
 
 @Composable
-fun TvShowScreen(navController: NavController) {
+fun HomeScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
