@@ -81,6 +81,9 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     implementation(libs.map.sdk)
+
+    implementation(libs.gson)
+
 }
 kapt {
     correctErrorTypes = true
