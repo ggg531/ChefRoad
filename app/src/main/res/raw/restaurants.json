@@ -15,7 +15,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_01_main",
       "allergyIcons": [1, 2, 3],
       "waitTime": "50분",
       "tvShow": "BLACKWHITE",
@@ -38,7 +38,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_02_main",
       "allergyIcons": [4, 5],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
@@ -61,7 +61,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_03_main",
       "allergyIcons": [4, 5],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
@@ -85,7 +85,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_04_main",
       "allergyIcons": [4, 5],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
@@ -116,7 +116,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_05_main",
       "allergyIcons": [4, 5],
       "waitTime": "40분",
       "tvShow": "BLACKWHITE",
@@ -139,7 +139,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_06_main",
       "allergyIcons": [4, 5],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
@@ -168,7 +168,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_07_main",
       "allergyIcons": [4, 5],
       "waitTime": "1시간",
       "tvShow": "BLACKWHITE",
@@ -191,7 +191,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_08_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -214,7 +214,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_09_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -242,7 +242,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_10_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -270,7 +270,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_11_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "BLACKWHITE",
@@ -298,7 +298,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_12_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -331,7 +331,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_13_main",
       "allergyIcons": [4, 5],
       "waitTime": "1시간 30분",
       "tvShow": "BLACKWHITE",
@@ -363,7 +363,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_14_main",
       "allergyIcons": [4, 5],
       "waitTime": "5분",
       "tvShow": "BLACKWHITE",
@@ -394,7 +394,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_15_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -417,7 +417,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_16_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -441,7 +441,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_17_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
@@ -471,7 +471,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_18_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "BLACKWHITE",
@@ -496,7 +496,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_19_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
@@ -519,7 +519,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_20_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
@@ -552,7 +552,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_21_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -578,7 +578,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_22_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -611,7 +611,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_23_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
@@ -645,7 +645,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_24_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -670,7 +670,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_25_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
@@ -698,7 +698,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_26_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -731,7 +731,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_27_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -760,7 +760,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_28_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
@@ -793,7 +793,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_29_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -819,7 +819,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_30_main",
       "allergyIcons": [4, 5],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
@@ -844,7 +844,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_31_main",
       "allergyIcons": [4, 5],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
@@ -877,7 +877,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_32_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
@@ -904,7 +904,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_33_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "WEDNESDAY",
@@ -940,7 +940,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_34_main",
       "allergyIcons": [4, 5],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
@@ -968,7 +968,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_35_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
@@ -994,7 +994,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_36_main",
       "allergyIcons": [4, 5],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
@@ -1030,7 +1030,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_37_main",
       "allergyIcons": [4, 5],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
@@ -1056,7 +1056,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_38_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
@@ -1086,7 +1086,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_39_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
@@ -1114,7 +1114,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_40_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
@@ -1146,7 +1146,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_41_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "LINEUP",
@@ -1169,7 +1169,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_42_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "LINEUP",
@@ -1195,7 +1195,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_43_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "LINEUP",
@@ -1227,7 +1227,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_44_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "LINEUP",
@@ -1254,7 +1254,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_45_main",
       "allergyIcons": [4, 5],
       "waitTime": "15분",
       "tvShow": "LINEUP",
@@ -1282,7 +1282,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_46_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "LINEUP",
@@ -1314,7 +1314,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_47_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "LINEUP",
@@ -1342,7 +1342,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_48_main",
       "allergyIcons": [4, 5],
       "waitTime": "15분",
       "tvShow": "LINEUP",
@@ -1370,7 +1370,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_49_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "LINEUP",
@@ -1398,7 +1398,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_50_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "LINEUP",
@@ -1428,7 +1428,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_51_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "LINEUP",
@@ -1455,7 +1455,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_52_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "LINEUP",
@@ -1483,7 +1483,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_53_main",
       "allergyIcons": [4, 5],
       "waitTime": "30분",
       "tvShow": "LINEUP",
@@ -1510,7 +1510,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_54_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "LINEUP",
@@ -1542,7 +1542,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_55_main",
       "allergyIcons": [4, 5],
       "waitTime": "15",
       "tvShow": "LINEUP",
@@ -1569,7 +1569,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_56_main",
       "allergyIcons": [4, 5],
       "waitTime": "20분",
       "tvShow": "LINEUP",
@@ -1597,7 +1597,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_57_main",
       "allergyIcons": [4, 5],
       "waitTime": "25분",
       "tvShow": "LINEUP",
@@ -1625,7 +1625,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_58_main",
       "allergyIcons": [4, 5],
       "waitTime": "0분",
       "tvShow": "LINEUP",
@@ -1652,7 +1652,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_59_main",
       "allergyIcons": [4, 5],
       "waitTime": "10분",
       "tvShow": "LINEUP",
@@ -1679,7 +1679,7 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
+      "imageResId": "restaurant_60_main",
       "allergyIcons": [4, 5],
       "waitTime": "15분",
       "tvShow": "LINEUP",
