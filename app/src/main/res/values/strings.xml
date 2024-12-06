@@ -7,4 +7,74 @@
     <string name="title_activity_splash">SplashActivity</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="program1">흑백요리사</string>
+    <string name="program2">수요미식회</string>
+    <string name="program3">줄 서는 식당</string>
+    <string-array name="pg1_restaurant_names">
+        <item>트리드</item>
+        <item>디핀</item>
+        <item>PONO BUONO 포노 부오노</item>
+        <item>CHOI. 쵸이닷</item>
+        <item>티엔미미 홍대점</item>
+        <item>식당네오</item>
+        <item>도량</item>
+        <item>비아 톨레도 파스타바</item>
+        <item>조광201</item>
+        <item>네기스키야키 압구정점</item>
+        <item>홍보각</item>
+        <item>프렌치 터치더스카이</item>
+        <item>진진</item>
+        <item>마마리다이닝</item>
+        <item>로컬릿</item>
+        <item>본연</item>
+        <item>윤서울</item>
+        <item>가매일식</item>
+        <item>엄마밥상</item>
+        <item>즐거운술상</item>
+    </string-array>
+    <string-array name="pg1_restaurant_prices">
+        <item>100000</item>
+        <item>150000</item>
+        <item>120000</item>
+        <item>185000</item>
+        <item>200000</item>
+        <item>70000</item>
+        <item>100000</item>
+        <item>80000</item>
+        <item>95000</item>
+        <item>130000</item>
+        <item>120000</item>
+        <item>70000</item>
+        <item>40000</item>
+        <item>60000</item>
+        <item>125000</item>
+        <item>92000</item>
+        <item>93000</item>
+        <item>107000</item>
+        <item>40000</item>
+        <item>50000</item>
+    </string-array>
+
+    <string-array name="pg1_restaurant_distances">
+        <item>2.5</item>
+        <item>0.7</item>
+        <item>1.4</item>
+        <item>3.7</item>
+        <item>2.2</item>
+        <item>10.1</item>
+        <item>7.2</item>
+        <item>8.0</item>
+        <item>9.1</item>
+        <item>0.2</item>
+        <item>7.3</item>
+        <item>1.1</item>
+        <item>5.5</item>
+        <item>4.4</item>
+        <item>2.2</item>
+        <item>5.5</item>
+        <item>7.7</item>
+        <item>3.2</item>
+        <item>8.6</item>
+        <item>9.4</item>
+    </string-array>
 </resources>
