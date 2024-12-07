@@ -16,19 +16,6 @@ enum class Category {
     LINEUP
 }
 
-
-fun List<Restaurant>.toLocationMapList(): List<LocationMap> {
-    return this.map { restaurant ->
-        LocationMap(
-            id = restaurant.id,
-            name = restaurant.name,
-            latitude = restaurant.latitude,
-            longitude = restaurant.longitude,
-            category = determineCategory(restaurant.id)
-        )
-    }
-}
-
 private fun determineCategory(id: Int): Category {
     return when (id) {
         in 1..20 -> Category.BLACKWHITE

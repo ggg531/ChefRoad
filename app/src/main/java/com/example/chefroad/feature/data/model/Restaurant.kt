@@ -5,8 +5,6 @@ data class Restaurant(
     val name: String,
     val phoneNumber: String,
     val address: String,
-    val latitude: Double,
-    val longitude: Double,
     val openingHours: String,
     val weeklyHours: List<String>,
     val menuItems: List<MenuItem>,
