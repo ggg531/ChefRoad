@@ -22,12 +22,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.chefroad.feature.data.model.Category
+import com.example.chefroad.feature.data.model.LocationMap
 import com.example.chefroad.ui.theme.BottomBar
 import com.example.chefroad.ui.theme.Purple2
 import com.naver.maps.map.MapView
 
 @Composable
 fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
+    val locations by viewModel.locations.observeAsState(emptyList())
     val filterState by viewModel.filterState.observeAsState(null)
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -71,7 +74,7 @@ fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
                 Text("수요미식회")
             }
             Button(
-                onClick = { viewModel.filterMarkers("줄서는식당") },
+                onClick = { viewModel.filterMarkers("줄 서는 식당") },
                 modifier = Modifier.padding(4.dp).width(120.dp).height(50.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Purple2,

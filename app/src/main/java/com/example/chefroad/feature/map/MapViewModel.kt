@@ -1,51 +1,40 @@
 package com.example.chefroad.feature.map
 
+import android.content.Context
 import android.graphics.Color
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.chefroad.feature.data.model.LocationMap
+import com.example.chefroad.feature.data.model.toLocationMapList
+import com.example.chefroad.feature.restaurant.data.loadRestaurants
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.geometry.LatLngBounds
 import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.overlay.Marker
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
-class MapViewModel : ViewModel() {
+@HiltViewModel
+class MapViewModel @Inject constructor(
+    @ApplicationContext private val context: Context
+) : ViewModel() {
     private var naverMap: NaverMap? = null
-    private val black = listOf(
-        LocationData(
-            LatLng(37.501339, 127.122653),
-            "조광201"
-        ),
-        LocationData(
-            LatLng(37.630186, 127.041268),
-            "깃든"
-        )
-    )
-    private val wednesday = listOf(
-        LocationData(
-            LatLng(37.539707, 126.886666),
-            "길풍식당"
-        ),
-        LocationData(
-            LatLng(37.570125, 126.987034),
-            "일미식당"
-        )
-    )
-    private val line = listOf(
-        LocationData(
-            LatLng(37.5615, 126.9253),
-            "바다회사랑"
-        ),
-        LocationData(
-            LatLng(37.539707, 126.886666),
-            "몽탄"
-        )
-    )
+
+    private val _locations = MutableLiveData<List<LocationMap>>()
+    val locations: LiveData<List<LocationMap>> get() = _locations
+
+    private val _filterState = MutableLiveData<String?>()
+    val filterState: LiveData<String?> get() = _filterState
 
     private val markers = mutableListOf<Marker>()
-    private val _filterState = MutableLiveData<String?>()
-    val filterState: LiveData<String?> = _filterState
+
+    init {
+        val restaurants = loadRestaurants(context)
+        _locations.value = restaurants.toLocationMapList()
+    }
 
     fun initializeMap(map: NaverMap) {
         naverMap = map
@@ -56,6 +45,9 @@ class MapViewModel : ViewModel() {
     private fun setupMapSettings() {
         naverMap?.apply {
             mapType = NaverMap.MapType.Basic
+            moveCamera(CameraUpdate.scrollTo(LatLng(37.5665, 126.9780)))
+            /*
+            mapType = NaverMap.MapType.Basic
             val boundsBuilder = LatLngBounds.Builder()
             val allLocations = black + wednesday + line
             allLocations.forEach { location ->
@@ -63,25 +55,26 @@ class MapViewModel : ViewModel() {
             }
             val bounds = boundsBuilder.build()
 
-            moveCamera(CameraUpdate.fitBounds(bounds, 100))
+            moveCamera(CameraUpdate.fitBounds(bounds, 100)) */
         }
     }
 
     fun addMarkers(filter: String?) {
         clearMarkers()
         val filteredLocations = when (filter) {
-            "흑백요리사" -> black
-            "수요미식회" -> wednesday
-            "줄서는식당" -> line
-            else -> black + wednesday + line
+            "흑백요리사" -> _locations.value?.filter { it.category.name == "BLACKWHITE" }
+            "수요미식회" -> _locations.value?.filter { it.category.name == "WEDNESDAY" }
+            "줄 서는 식당" -> _locations.value?.filter { it.category.name == "LINEUP" }
+            else -> _locations.value
         }
 
         naverMap?.let { map ->
-            filteredLocations.forEach { location ->
+            filteredLocations?.forEach { location ->
                 val marker = Marker().apply {
-                    position = location.latLng
+                    position = LatLng(location.latitude, location.longitude)
                     this.map = map
-                    captionText = location.caption
+                    captionText = location.name
+                    /*
                     captionTextSize = 16f
                     isHideCollidedCaptions = false
                     iconTintColor = when (location) {
@@ -89,7 +82,7 @@ class MapViewModel : ViewModel() {
                         in wednesday -> 0xFF1E90FF.toInt()
                         in line -> 0xFF32CD32.toInt()
                         else -> Color.WHITE
-                    }
+                    }*/
                 }
                 markers.add(marker)
             }
@@ -105,9 +98,4 @@ class MapViewModel : ViewModel() {
         _filterState.value = category
         addMarkers(category)
     }
-
-    data class LocationData(
-        val latLng: LatLng,
-        val caption: String
-    )
 }
