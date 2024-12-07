@@ -20,8 +20,8 @@
       "waitTime": "50분",
       "tvShow": "BLACKWHITE",
       "distance": 2.5,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["달걀","우유","땅콩"]
     },
     {
@@ -43,7 +43,7 @@
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 0.7,
-      "food_type": "한식",
+      "food_type": "양식",
       "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
@@ -144,7 +144,7 @@
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 10.1,
-      "food_type": "양식",
+      "food_type": "일식",
       "restaurant_type": "파인다이닝",
       "allergies": ["조개"]
     },
@@ -336,7 +336,7 @@
       "waitTime": "1시간 30분",
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -368,8 +368,8 @@
       "waitTime": "5분",
       "tvShow": "BLACKWHITE",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -399,7 +399,7 @@
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 2.2,
-      "food_type": "베이커리",
+      "food_type": "비건",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","땅콩"]
     },
@@ -423,7 +423,7 @@
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
       "food_type": "한식",
-      "restaurant_type": "캐주얼다이닝",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
     {
@@ -502,7 +502,7 @@
       "tvShow": "BLACKWHITE",
       "distance": 8.6,
       "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀","조개"]
     },
     {
@@ -557,8 +557,8 @@
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 9.4,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "베이커리",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
     {
@@ -616,7 +616,7 @@
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.2,
-      "food_type": "일식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
@@ -651,7 +651,7 @@
       "tvShow": "WEDNESDAY",
       "distance": 7.7,
       "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["달걀"]
     },
     {
@@ -675,8 +675,8 @@
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
-      "food_type": "한식",
-      "restaurant_type": "캐주얼다이닝",
+      "food_type": "일식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
     {
@@ -703,7 +703,7 @@
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
-      "food_type": "베이커리",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","땅콩"]
     },
@@ -736,8 +736,8 @@
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "중식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -765,7 +765,7 @@
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -798,8 +798,8 @@
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.1,
-      "food_type": "양식",
-      "restaurant_type": "뷔페",
+      "food_type": "베이커리",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선"]
     },
     {
@@ -824,7 +824,7 @@
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.3,
-      "food_type": "중식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -849,8 +849,8 @@
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 0.2,
-      "food_type": "일식",
-      "restaurant_type": "뷔페",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["우유","조개"]
     },
     {
@@ -882,7 +882,7 @@
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
       "distance": 9.1,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": []
     },
@@ -909,7 +909,7 @@
       "waitTime": "30분",
       "tvShow": "WEDNESDAY",
       "distance": 2.5,
-      "food_type": "양식",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
@@ -945,8 +945,8 @@
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.2,
-      "food_type": "중식",
-      "restaurant_type": "캐주얼다이닝",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","달걀"]
     },
     {
@@ -974,7 +974,7 @@
       "tvShow": "WEDNESDAY",
       "distance": 10.1,
       "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
     {
@@ -1000,7 +1000,7 @@
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
       "food_type": "중식",
-      "restaurant_type": "캐주얼다이닝",
+      "restaurant_type": "파인다이닝",
       "allergies": ["조개","우유","생선"]
     },
     {
@@ -1035,8 +1035,8 @@
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1061,8 +1061,8 @@
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
-      "food_type": "베이커리",
-      "restaurant_type": "파인다이닝",
+      "food_type": "양식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1091,7 +1091,7 @@
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.4,
-      "food_type": "양식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1120,40 +1120,8 @@
       "tvShow": "WEDNESDAY",
       "distance": 0.7,
       "food_type": "일식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선","달걀"]
-    },
-    {
-      "id": 41,
-      "name": "몽탄",
-      "phoneNumber": "0507-1418-8592",
-      "address": "서울 용산구 백범로99길 50",
-      "openingHours": "12:00 ~ 22:00",
-      "weeklyHours": ["12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
-      "menuItems": [
-        { "name": "우대갈비", "price": 34000, "imageResId": null },
-        { "name": "짚불항정살", "price": 17000, "imageResId": null },
-        { "name": "트러플계란찜", "price": 13000, "imageResId": null },
-        { "name": "들기름유자샐러드", "price": 15000, "imageResId": null },
-        { "name": "몽탄육회", "price": 19000, "imageResId": null },
-        { "name": "몽탄냉면", "price": 8000, "imageResId": null },
-        { "name": "된장찌개", "price": 9000, "imageResId": null },
-        { "name": "양파볶음밥", "price": 5000, "imageResId": null },
-        { "name": "산토리하이볼", "price": 10000, "imageResId": null }
-
-      ],
-      "reviews": [
-        { "userName": "A", "content": "맛있어요!", "userImageResId": null },
-        { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
-      ],
-      "imageResId": "restaurant_41_main",
-      "allergyIcons": [4, 5],
-      "waitTime": "20분",
-      "tvShow": "LINEUP",
-      "distance": 9.4,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
-      "allergies": ["생선","달걀"]
     },
     {
       "id": 42,
@@ -1174,8 +1142,8 @@
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 8.6,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "일식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀","조개"]
     },
     {
@@ -1200,7 +1168,7 @@
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 3.2,
-      "food_type": "일식",
+      "food_type": "베이커리",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
@@ -1232,7 +1200,7 @@
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.7,
-      "food_type": "양식",
+      "food_type": "일식",
       "restaurant_type": "파인다이닝",
       "allergies": ["달걀"]
     },
@@ -1259,7 +1227,7 @@
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
-      "food_type": "한식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","조개"]
     },
@@ -1319,8 +1287,8 @@
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -1347,7 +1315,7 @@
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1375,8 +1343,8 @@
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 1.1,
-      "food_type": "양식",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선"]
     },
     {
@@ -1403,7 +1371,7 @@
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.3,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -1433,8 +1401,8 @@
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.2,
-      "food_type": "일식",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
     {
@@ -1460,9 +1428,9 @@
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 9.1,
-      "food_type": "중식",
+      "food_type": "베이커리",
       "restaurant_type": "캐주얼다이닝",
-      "allergies": []
+      "allergies": ["달걀","우유"]
     },
     {
       "id": 53,
@@ -1488,7 +1456,7 @@
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 2.5,
-      "food_type": "양식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
@@ -1515,7 +1483,7 @@
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 7.2,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -1547,8 +1515,8 @@
       "waitTime": "15",
       "tvShow": "LINEUP",
       "distance": 10.1,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
     {
@@ -1574,7 +1542,7 @@
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 2.2,
-      "food_type": "중식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유","생선"]
     },
@@ -1602,8 +1570,8 @@
       "waitTime": "25분",
       "tvShow": "LINEUP",
       "distance": 3.7,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1630,7 +1598,7 @@
       "waitTime": "0분",
       "tvShow": "LINEUP",
       "distance": 1.4,
-      "food_type": "양식",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1657,8 +1625,8 @@
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.7,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "양식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩"]
     },
     {
@@ -1684,9 +1652,9 @@
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
-      "allergies": ["땅콩","달걀","우유"]
+      "food_type": "양식",
+      "restaurant_type": "캐주얼",
+      "allergies": ["달걀","우유","조개"]
     }
   ]
 }
