@@ -24,7 +24,6 @@ fun loadRestaurants(context: Context): List<Restaurant> {
     val type = object : TypeToken<List<Restaurant>>() {}.type
     val restaurants = Gson().fromJson<List<Restaurant>>(reader, type)
 
-    // Allergy Icons 매핑
     return restaurants.map { restaurant ->
         restaurant.copy(
             allergyIcons = mapAllergyIcons(context, restaurant.allergyIcons as List<String>)
