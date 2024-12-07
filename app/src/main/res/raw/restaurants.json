@@ -17,7 +17,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_01_main",
-      "allergyIcons": [1, 2, 3],
+      "allergyIcons": ["egg", "milk", "peanut"],
       "waitTime": "50분",
       "tvShow": "BLACKWHITE",
       "distance": 2.5,
@@ -41,7 +41,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_02_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 0.7,
@@ -65,7 +65,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_03_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 1.4,
@@ -90,7 +90,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_04_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 3.7,
@@ -122,7 +122,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_05_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "40분",
       "tvShow": "BLACKWHITE",
       "distance": 2.2,
@@ -146,7 +146,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_06_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 10.1,
@@ -176,7 +176,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_07_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "1시간",
       "tvShow": "BLACKWHITE",
       "distance": 7.2,
@@ -200,7 +200,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_08_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 2.5,
@@ -224,7 +224,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_09_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": [],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 9.1,
@@ -253,7 +253,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_10_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 0.2,
@@ -282,7 +282,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_11_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "0분",
       "tvShow": "BLACKWHITE",
       "distance": 7.3,
@@ -311,7 +311,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_12_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 1.1,
@@ -345,7 +345,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_13_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk"],
       "waitTime": "1시간 30분",
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
@@ -378,7 +378,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_14_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "5분",
       "tvShow": "BLACKWHITE",
       "distance": 4.4,
@@ -410,7 +410,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_15_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 2.2,
@@ -434,7 +434,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_16_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
@@ -459,7 +459,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_17_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["egg"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 7.7,
@@ -490,7 +490,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_18_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "BLACKWHITE",
       "distance": 3.2,
@@ -516,7 +516,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_19_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
       "distance": 8.6,
@@ -540,7 +540,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_20_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
       "distance": 9.4,
@@ -574,7 +574,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_21_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 9.4,
@@ -601,7 +601,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_22_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg", "clam"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 8.6,
@@ -635,7 +635,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_23_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.2,
@@ -670,7 +670,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_24_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["egg"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 7.7,
@@ -696,7 +696,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_25_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
@@ -725,7 +725,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_26_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
@@ -759,7 +759,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_27_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 4.4,
@@ -789,7 +789,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_28_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
@@ -823,7 +823,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_29_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.1,
@@ -850,7 +850,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_30_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.3,
@@ -876,7 +876,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_31_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 0.2,
@@ -910,7 +910,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_32_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": [],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
       "distance": 9.1,
@@ -938,7 +938,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_33_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "30분",
       "tvShow": "WEDNESDAY",
       "distance": 2.5,
@@ -975,7 +975,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_34_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.2,
@@ -1004,7 +1004,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_35_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
       "distance": 10.1,
@@ -1031,7 +1031,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_36_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "milk", "fish"],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
@@ -1068,7 +1068,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_37_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
@@ -1095,7 +1095,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_38_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
@@ -1126,7 +1126,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_39_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.4,
@@ -1155,7 +1155,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_40_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "fish", "egg"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 0.7,
@@ -1188,7 +1188,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_41_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 9.4,
@@ -1212,7 +1212,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_42_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg", "clam"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 8.6,
@@ -1239,7 +1239,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_43_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 3.2,
@@ -1272,7 +1272,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_44_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["egg"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.7,
@@ -1300,7 +1300,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_45_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
@@ -1329,7 +1329,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_46_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 2.2,
@@ -1362,7 +1362,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_47_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 4.4,
@@ -1391,7 +1391,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_48_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
@@ -1420,7 +1420,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_49_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 1.1,
@@ -1449,7 +1449,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_50_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.3,
@@ -1480,7 +1480,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_51_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.2,
@@ -1508,7 +1508,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_52_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["egg", "milk"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 9.1,
@@ -1537,7 +1537,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_53_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 2.5,
@@ -1565,7 +1565,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_54_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 7.2,
@@ -1598,7 +1598,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_55_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam"],
       "waitTime": "15",
       "tvShow": "LINEUP",
       "distance": 10.1,
@@ -1626,7 +1626,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_56_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "milk", "fish"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 2.2,
@@ -1655,7 +1655,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_57_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "25분",
       "tvShow": "LINEUP",
       "distance": 3.7,
@@ -1684,7 +1684,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_58_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["milk"],
       "waitTime": "0분",
       "tvShow": "LINEUP",
       "distance": 1.4,
@@ -1712,7 +1712,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_59_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["peanut"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.7,
@@ -1740,7 +1740,7 @@
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
       "imageResId": "restaurant_60_main",
-      "allergyIcons": [4, 5],
+      "allergyIcons": ["egg", "milk", "clam"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 4.4,

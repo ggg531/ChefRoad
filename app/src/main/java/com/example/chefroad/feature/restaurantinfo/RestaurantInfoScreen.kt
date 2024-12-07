@@ -21,6 +21,7 @@ import com.example.chefroad.feature.restaurant.data.model.MenuItem
 import com.example.chefroad.feature.restaurant.data.model.Review
 import com.example.chefroad.feature.restaurant.data.model.Restaurant
 import androidx.compose.ui.platform.LocalContext
+import com.example.chefroad.util.getDrawableResId
 import com.example.chefroad.util.getImageResourceId
 
 @Composable
@@ -199,14 +200,15 @@ fun MenuTabContent(menuItems: List<MenuItem>) {
         contentPadding = PaddingValues(vertical = 8.dp)
     ) {
         items(menuItems) { menuItem ->
-            val imageResId = getImageResourceId(context, menuItem.imageResId) // 리소스 ID 변환
+            val imageResId = getDrawableResId(context, menuItem.imageResId) ?: R.drawable.placeholder
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
             ) {
                 Image(
-                    painter = painterResource(id = imageResId ?: R.drawable.placeholder),
+                    painter = painterResource(id = imageResId),
                     contentDescription = "Menu Image",
                     modifier = Modifier
                         .size(64.dp)
@@ -230,6 +232,8 @@ fun MenuTabContent(menuItems: List<MenuItem>) {
     }
 }
 
+
+
 @Composable
 fun ReviewTabContent(reviews: List<Review>) {
     val context = LocalContext.current
@@ -238,14 +242,15 @@ fun ReviewTabContent(reviews: List<Review>) {
         contentPadding = PaddingValues(vertical = 8.dp)
     ) {
         items(reviews) { review ->
-            val imageResId = getImageResourceId(context, review.userImageResId) // 리소스 ID 변환
+            val userImageRes = getDrawableResId(context, review.userImageResId) ?: R.drawable.placeholder
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
             ) {
                 Image(
-                    painter = painterResource(id = imageResId ?: R.drawable.placeholder),
+                    painter = painterResource(id = userImageRes),
                     contentDescription = "User Image",
                     modifier = Modifier
                         .size(48.dp)
@@ -268,3 +273,5 @@ fun ReviewTabContent(reviews: List<Review>) {
         }
     }
 }
+
+
