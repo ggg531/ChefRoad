@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".ChefRoad"
@@ -30,8 +31,5 @@
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="0od45ycjk1" />
-        <meta-data
-            android:name="com.naver.maps.map.CLIENT_TYPE"
-            android:value="gov" />
     </application>
 </manifest>

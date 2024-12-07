@@ -1,15 +1,13 @@
 package com.example.chefroad.feature.map
 
 import android.content.Context
-import android.graphics.Color
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.chefroad.feature.data.model.LocationMap
-import com.example.chefroad.feature.data.model.toLocationMapList
-import com.example.chefroad.feature.restaurant.data.loadRestaurants
+import com.example.chefroad.feature.data.model.TvShow
+import com.example.chefroad.feature.restaurant.data.loadLocationMaps
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.geometry.LatLngBounds
 import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.overlay.Marker
@@ -26,14 +24,13 @@ class MapViewModel @Inject constructor(
     private val _locations = MutableLiveData<List<LocationMap>>()
     val locations: LiveData<List<LocationMap>> get() = _locations
 
-    private val _filterState = MutableLiveData<String?>()
-    val filterState: LiveData<String?> get() = _filterState
+    private val _filterState = MutableLiveData<TvShow?>()
+    val filterState: LiveData<TvShow?> get() = _filterState
 
     private val markers = mutableListOf<Marker>()
 
     init {
-        val restaurants = loadRestaurants(context)
-        _locations.value = restaurants.toLocationMapList()
+        _locations.value = loadLocationMaps(context)
     }
 
     fun initializeMap(map: NaverMap) {
@@ -59,12 +56,12 @@ class MapViewModel @Inject constructor(
         }
     }
 
-    fun addMarkers(filter: String?) {
+    fun addMarkers(filter: TvShow?) {
         clearMarkers()
         val filteredLocations = when (filter) {
-            "흑백요리사" -> _locations.value?.filter { it.category.name == "BLACKWHITE" }
-            "수요미식회" -> _locations.value?.filter { it.category.name == "WEDNESDAY" }
-            "줄 서는 식당" -> _locations.value?.filter { it.category.name == "LINEUP" }
+            TvShow.BLACKWHITE -> _locations.value?.filter { it.category == TvShow.BLACKWHITE }
+            TvShow.WEDNESDAY -> _locations.value?.filter { it.category == TvShow.WEDNESDAY }
+            TvShow.LINEUP -> _locations.value?.filter { it.category == TvShow.LINEUP }
             else -> _locations.value
         }
 
@@ -94,7 +91,7 @@ class MapViewModel @Inject constructor(
         markers.clear()
     }
 
-    fun filterMarkers(category: String?) {
+    fun filterMarkers(category: TvShow?) {
         _filterState.value = category
         addMarkers(category)
     }
