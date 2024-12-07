@@ -38,7 +38,9 @@ fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
             factory = { context ->
                 MapView(context).apply {
                     getMapAsync { naverMap ->
-                        viewModel.initializeMap(naverMap)
+                        if (locations.isNotEmpty()) {
+                            viewModel.initializeMap(naverMap)
+                        }
                     }
                 }
             }
