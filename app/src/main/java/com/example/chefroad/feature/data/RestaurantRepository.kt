@@ -7,7 +7,7 @@ import com.google.gson.reflect.TypeToken
 import com.example.chefroad.R
 import com.example.chefroad.feature.data.model.ResFilter
 import com.example.chefroad.feature.data.model.TvShow
-import com.example.chefroad.feature.restaurant.data.model.Restaurant 
+import com.example.chefroad.feature.restaurant.data.model.Restaurant
 import java.io.InputStream
 import java.io.InputStreamReader
 
