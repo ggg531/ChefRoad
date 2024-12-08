@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.firebase.auth.ktx)
+
     implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -79,6 +80,21 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
+
+    implementation ("com.google.firebase:firebase-database-ktx:20.1.0") // Firebase Realtime Database
+    implementation ("com.google.firebase:firebase-firestore-ktx:24.6.0") // Firebase Firestore
+    implementation ("com.google.firebase:firebase-auth-ktx:21.0.3") // Firebase Auth
+    implementation ("com.google.firebase:firebase-vertexai:1.0.0") // Firebase Vertex AI (버전 필요)
+
+    //implementation(libs.firebase.database.ktx)
+    //implementation(libs.firebase.firestore.ktx)
+    //implementation(libs.firebase.vertexai)
+    //implementation(libs.androidx.room.common)
+
+    //implementation ("com.google.firebase:firebase-firestore:24.6.0")  // FirebaseFirestore 의존성 추가
+    //implementation ("com.google.firebase:firebase-auth:21.0.7")      // FirebaseAuth 의존성 (만약 안 추가되어 있다면)
 
     implementation (libs.map.sdk)
 }

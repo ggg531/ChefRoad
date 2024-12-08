@@ -60,8 +60,9 @@ fun MainApp() {
                 composable(route = "home") {
                     HomeScreen(navController = navController)
                 }
-                composable("restaurant") {
-                    RestaurantScreen(navController = navController)
+                composable("restaurants/{tvShow}") { backStackEntry ->
+                    val tvShow = backStackEntry.arguments?.getString("tvShow") ?: "BLACKWHITE"
+                    RestaurantScreen(navController = navController, selectedTvShow = tvShow)
                 }
                 composable("filter") {
                     FilterScreen(navController = navController)

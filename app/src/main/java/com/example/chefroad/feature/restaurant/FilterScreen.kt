@@ -48,7 +48,10 @@ import com.example.chefroad.ui.theme.Purple1
 import com.example.chefroad.ui.theme.Purple2
 
 @Composable
-fun FilterScreen(navController: NavController, viewModel: FilterViewModel = viewModel()) {
+fun FilterScreen(
+    navController: NavController,
+    viewModel: FilterViewModel = viewModel()
+) {
     var isFilterVisible by remember { mutableStateOf(false) }
 
     Box(
@@ -56,7 +59,7 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
-        RestaurantScreen(navController)
+        //RestaurantScreen(navController,)
 
         IconButton(
             onClick = { isFilterVisible = !isFilterVisible },
