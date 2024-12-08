@@ -68,7 +68,7 @@ fun SignUpScreen(navController: NavController) {
                 }
             }
             is SignUpState.Error -> {
-                Toast.makeText(context, context.getString(R.string.signinfailed), Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.signupfailed), Toast.LENGTH_SHORT).show()
             }
             else -> {}
         }
