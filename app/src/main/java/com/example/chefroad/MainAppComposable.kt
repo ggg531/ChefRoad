@@ -62,8 +62,9 @@ fun MainApp() {
                 }
                 composable("restaurants/{tvShow}") { backStackEntry ->
                     val tvShow = backStackEntry.arguments?.getString("tvShow") ?: "BLACKWHITE"
-                    RestaurantScreen(navController = navController, selectedTvShow = tvShow)
+                    restaurant_list(navController = navController, selectedTvShow = tvShow)
                 }
+
                 composable("filter") {
                     FilterScreen(navController = navController)
                 }
@@ -77,10 +78,6 @@ fun MainApp() {
                 composable("restaurant_detail/{restaurantName}") { backStackEntry ->
                     val restaurantName = backStackEntry.arguments?.getString("restaurantName") ?: ""
                     RestaurantDetailScreen(navController = navController, restaurantName = restaurantName)
-                }
-                composable("restaurants/{tvShow}") { backStackEntry ->
-                    val tvShow = backStackEntry.arguments?.getString("tvShow") ?: "BLACKWHITE"
-                    restaurant_list(navController = navController, selectedTvShow = tvShow)
                 }
 
                 composable("myreview/{id}") { backStackEntry ->

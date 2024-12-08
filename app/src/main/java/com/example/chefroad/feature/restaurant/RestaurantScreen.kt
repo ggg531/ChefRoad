@@ -70,27 +70,17 @@ fun RestaurantScreen(
     var selectedSortOption by remember { mutableStateOf("가까운 순") }
     var expanded by remember { mutableStateOf(false) }
 
-    val restaurants by restaurantViewModel.restaurants.collectAsState()//(initial = emptyList())
-    val favoriteRestaurants by restaurantViewModel.favoriteRestaurants.collectAsState()
+    val restaurants by restaurantViewModel.restaurants.collectAsState()
     val context = LocalContext.current
 
-
-
-    // 식당 데이터 로드
+    // 데이터 로드
     LaunchedEffect(selectedTvShow) {
         restaurantViewModel.loadRestaurants(context)
     }
 
     // 방송에 맞는 식당만 필터링
     val filteredRestaurants = restaurantViewModel.filterRestaurantsByShow(selectedTvShow)
-        .filter { restaurant -> searchText.all { it in restaurant.name } }
-
-    // 정렬 옵션에 따라 리스트 정렬
-    val sortedRestaurants = when (selectedSortOption) {
-        "가까운 순" -> filteredRestaurants.sortedBy { it.distance }
-        "식당 이름 가나다순" -> filteredRestaurants.sortedBy { it.name }
-        else -> filteredRestaurants
-    }
+        .filter { it.name.contains(searchText, ignoreCase = true) }
 
     Scaffold(
         topBar = {
@@ -102,7 +92,7 @@ fun RestaurantScreen(
             ) {
                 IconButton(onClick = { navController.navigateUp() }) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        imageVector = Icons.Default.ArrowBack,
                         contentDescription = "back",
                         tint = Color.Black
                     )
@@ -113,13 +103,6 @@ fun RestaurantScreen(
                     modifier = Modifier.weight(1f),
                     textAlign = TextAlign.Center
                 )
-                IconButton(onClick = { /* 추가 기능 */ }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.List,
-                        contentDescription = "filtering",
-                        tint = Color.Black
-                    )
-                }
             }
         },
         content = { paddingValues ->
@@ -128,7 +111,7 @@ fun RestaurantScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
-                // 검색창과 정렬 버튼
+                // 검색 및 정렬 UI
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -141,9 +124,10 @@ fun RestaurantScreen(
                         modifier = Modifier
                             .weight(1f)
                             .padding(8.dp)
-                            .border(1.dp, Color.Gray)
-                            .padding(8.dp),
-                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text, imeAction = ImeAction.Done),
+                            .border(1.dp, Color.Gray),
+                        keyboardOptions = KeyboardOptions.Default.copy(
+                            imeAction = ImeAction.Done
+                        ),
                         decorationBox = { innerTextField ->
                             if (searchText.isEmpty()) {
                                 Text("검색", color = Color.Gray)
@@ -151,35 +135,10 @@ fun RestaurantScreen(
                             innerTextField()
                         }
                     )
-
-                    Button(
-                        onClick = { expanded = !expanded },
-                        modifier = Modifier.padding(start = 8.dp)
-                    ) {
-                        Text("정렬")
-                    }
-
-                    // 드롭다운 메뉴
-                    DropdownMenu(
-                        expanded = expanded,
-                        onDismissRequest = { expanded = false }
-                    ) {
-                        val options = listOf("가까운 순", "식당 이름 가나다순")
-                        options.forEach { option ->
-                            DropdownMenuItem(
-                                text = { Text(option) },
-                                onClick = {
-                                    selectedSortOption = option
-                                    expanded = false
-                                }
-                            )
-                        }
-                    }
                 }
 
-                // 식당 목록
                 LazyColumn(modifier = Modifier.padding(16.dp)) {
-                    items(sortedRestaurants) { restaurant ->
+                    items(filteredRestaurants) { restaurant ->
                         RestaurantItem(
                             restaurant = restaurant,
                             viewModel = restaurantViewModel,
@@ -190,28 +149,10 @@ fun RestaurantScreen(
                     }
                 }
             }
-        },
-        /*
-        bottomBar = { BottomAppBar (
-            modifier = Modifier.padding(10.dp).fillMaxWidth()
-        ) {
-            IconButton(
-                onClick = { navController.navigate("home") },
-                modifier = Modifier.weight(1f)
-            ) {
-                Image(painter = painterResource(id = R.drawable.restaurant), contentDescription = "restbutton")
-            }
-            // 마이페이지 이동 버튼
-            IconButton(
-                onClick = { navController.navigate("mypage") },
-                modifier = Modifier.weight(1f)
-            ) {
-                Image(painter = painterResource(id = R.drawable.user_bottom), contentDescription = "mypagebutton")
-            }
         }
-        }*/
     )
 }
+
 
 @SuppressLint("StateFlowValueCalledInComposition")
 @Composable
