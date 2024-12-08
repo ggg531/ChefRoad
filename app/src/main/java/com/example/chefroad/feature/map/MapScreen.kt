@@ -22,12 +22,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.chefroad.feature.data.model.TvShow
 import com.example.chefroad.ui.theme.BottomBar
 import com.example.chefroad.ui.theme.Purple2
 import com.naver.maps.map.MapView
 
 @Composable
 fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
+    val locations by viewModel.locations.observeAsState(emptyList())
     val filterState by viewModel.filterState.observeAsState(null)
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -36,7 +38,9 @@ fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
             factory = { context ->
                 MapView(context).apply {
                     getMapAsync { naverMap ->
-                        viewModel.initializeMap(naverMap)
+                        if (locations.isNotEmpty()) {
+                            viewModel.initializeMap(naverMap)
+                        }
                     }
                 }
             }
@@ -50,46 +54,46 @@ fun MapScreen(viewModel: MapViewModel = hiltViewModel()) {
                 .horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Button(
-                onClick = { viewModel.filterMarkers("흑백요리사") },
-                modifier = Modifier.padding(4.dp).width(120.dp).height(50.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Purple2,
-                    contentColor = Color.White,
-                )
-            ) {
-                Text("흑백요리사")
-            }
-            Button(
-                onClick = { viewModel.filterMarkers("수요미식회") },
-                modifier = Modifier.padding(4.dp).width(120.dp).height(50.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Purple2,
-                    contentColor = Color.White,
-                )
-            ) {
-                Text("수요미식회")
-            }
-            Button(
-                onClick = { viewModel.filterMarkers("줄서는식당") },
-                modifier = Modifier.padding(4.dp).width(120.dp).height(50.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Purple2,
-                    contentColor = Color.White,
-                )
-            ) {
-                Text("줄 서는 식당")
-            }
-            Button(
-                onClick = { viewModel.filterMarkers(null) },
-                modifier = Modifier.padding(4.dp).width(120.dp).height(50.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Purple2,
-                    contentColor = Color.White,
-                )
-            ) {
-                Text("전체 보기")
-            }
+            FilterButton(
+                label = "흑백요리사",
+                isSelected = filterState == TvShow.BLACKWHITE,
+                onClick = { viewModel.filterMarkers(TvShow.BLACKWHITE) }
+            )
+            FilterButton(
+                label = "수요미식회",
+                isSelected = filterState == TvShow.WEDNESDAY,
+                onClick = { viewModel.filterMarkers(TvShow.WEDNESDAY) }
+            )
+            FilterButton(
+                label = "줄 서는 식당",
+                isSelected = filterState == TvShow.LINEUP,
+                onClick = { viewModel.filterMarkers(TvShow.LINEUP) }
+            )
+            FilterButton(
+                label = "전체 보기",
+                isSelected = filterState == null,
+                onClick = { viewModel.filterMarkers(null) }
+            )
         }
+    }
+}
+
+@Composable
+fun FilterButton(
+    label: String,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    Button(
+        onClick = onClick,
+        modifier = Modifier
+            .width(120.dp)
+            .height(50.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (isSelected) Purple2 else Color.LightGray,
+            contentColor = Color.White
+        )
+    ) {
+        Text(label)
     }
 }

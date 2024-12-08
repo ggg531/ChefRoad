@@ -5,23 +5,24 @@
       "name": "트리드",
       "phoneNumber": "02-512-8312",
       "address": "서울시 강남구 선릉로162길 16 2층",
+      "latitude": 37.512345, "longitude": 127.056789,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "정기휴무"],
       "menuItems": [
-        { "name": "Lunch Tasting Course", "price": 120000, "imageResId": "trid_lunch" },
-        { "name": "Dinner Tasting Course", "price": 200000, "imageResId": "trid_dinner" }
+        { "name": "Lunch Tasting Course", "price": 120000, "imageResId": "menu_01_01" },
+        { "name": "Dinner Tasting Course", "price": 200000, "imageResId": "menu_01_02" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [1, 2, 3],
+      "imageResId": "restaurant_01_main",
+      "allergyIcons": ["egg", "milk", "peanut"],
       "waitTime": "50분",
       "tvShow": "BLACKWHITE",
       "distance": 2.5,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["달걀","우유","땅콩"]
     },
     {
@@ -29,6 +30,7 @@
       "name": "디핀",
       "phoneNumber": "02-3298-5046",
       "address": "서울시 중구 퇴계로 411",
+      "latitude": 37.566789, "longitude": 127.00012,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "정기휴무", "18:00 ~ 24:00", "18:00 ~ 24:00", "18:00 ~ 24:00", "17:30 ~ 24:00", "17:30 ~ 24:00"],
       "menuItems": [
@@ -38,12 +40,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_02_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 0.7,
-      "food_type": "한식",
+      "food_type": "양식",
       "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
@@ -52,17 +54,18 @@
       "name": "포노 부오노",
       "phoneNumber": "0507-1361-4501",
       "address": "서울시 강남구 도산대로45길 8-7 2층",
+      "latitude": 37.543210, "longitude": 126.987654,
       "openingHours": "18:00 ~ 24:00",
       "weeklyHours": ["18:00 ~ 24:00", "18:00 ~ 24:00", "18:00 ~ 24:00", "18:00 ~ 24:00", "18:00 ~ 24:00", "18:00 ~ 24:00", "정기휴무"],
       "menuItems": [
-        { "name": "포노 브레드 PONO bread", "price": 10000, "imageResId": null }
+        { "name": "포노 브레드 PONO bread", "price": 10000, "imageResId": "menu_03_01" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_03_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 1.4,
@@ -75,6 +78,7 @@
       "name": "CHOI. 쵸이닷",
       "phoneNumber": "02-518-0318",
       "address": "서울시 강남구 도산대로457 3층",
+      "latitude": 37.490000, "longitude": 127.010000,
       "openingHours": "12:00 ~ 22:00",
       "weeklyHours": ["12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
       "menuItems": [
@@ -85,8 +89,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_04_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 3.7,
@@ -99,25 +103,26 @@
       "name": "티엔미미 홍대점",
       "phoneNumber": "010-8823-1070",
       "address": "서울시 마포구 양화로 144 머큐어 앰버서더 호텔 4층",
+      "latitude": 37.530000, "longitude": 127.060000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00"],
       "menuItems": [
-        { "name": "장육전복냉채", "price": 37000, "imageResId": null },
-        { "name": "찹쌀공(예약메뉴)", "price": 20000, "imageResId": null },
-        { "name": "티엔미미철판볶음", "price": 47000, "imageResId": null },
-        { "name": "어향완자가지", "price": 39000, "imageResId": null },
-        { "name": "눈꽃누룽지탕", "price": 42000, "imageResId": null },
-        { "name": "마라크림새우", "price": 36000, "imageResId": null },
-        { "name": "토마토탕면", "price": 15000, "imageResId": null },
-        { "name": "누룽지기스면", "price": 15000, "imageResId": null },
-        { "name": "찹쌀딤섬", "price": 10000, "imageResId": null }
+        { "name": "장육전복냉채", "price": 37000, "imageResId": "menu_05_01" },
+        { "name": "찹쌀공(예약메뉴)", "price": 20000, "imageResId": "menu_05_02" },
+        { "name": "티엔미미철판볶음", "price": 47000, "imageResId": "menu_05_03" },
+        { "name": "어향완자가지", "price": 39000, "imageResId": "menu_05_04" },
+        { "name": "눈꽃누룽지탕", "price": 42000, "imageResId": "menu_05_05" },
+        { "name": "마라크림새우", "price": 36000, "imageResId": "menu_05_06" },
+        { "name": "토마토탕면", "price": 15000, "imageResId": "menu_05_07" },
+        { "name": "누룽지기스면", "price": 15000, "imageResId": "menu_05_08" },
+        { "name": "찹쌀딤섬", "price": 10000, "imageResId": "menu_05_09" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_05_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "40분",
       "tvShow": "BLACKWHITE",
       "distance": 2.2,
@@ -130,21 +135,22 @@
       "name": "식당네오",
       "phoneNumber": "070-4212-5212",
       "address": "서울시 송파구 삼전로12길 4 101호",
+      "latitude": 37.580000, "longitude": 126.970000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "18:00 ~ 21:00", "18:00 ~ 21:00", "18:00 ~ 21:00", "18:00 ~ 21:00", "18:00 ~ 21:00", "정기휴무"],
       "menuItems": [
-        { "name": "푼푼식 키마구레 코스", "price": 77000, "imageResId": null }
+        { "name": "푼푼식 키마구레 코스", "price": 77000, "imageResId": "menu_06_01" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_06_main",
+      "allergyIcons": ["clam"],
       "waitTime": "캐치테이블 예약",
       "tvShow": "BLACKWHITE",
       "distance": 10.1,
-      "food_type": "양식",
+      "food_type": "일식",
       "restaurant_type": "파인다이닝",
       "allergies": ["조개"]
     },
@@ -153,23 +159,24 @@
       "name": "도량",
       "phoneNumber": "0507-1432-0210",
       "address": "서울시 종로구 지하문로6길 6 2, 3층",
+      "latitude": 37.540000, "longitude": 126.990000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30"],
       "menuItems": [
-        { "name": "도량정식1인", "price": 25000, "imageResId": null },
-        { "name": "팔보채", "price": 45000, "imageResId": null },
-        { "name": "마라샹궈(소고기/양고기)", "price": 38000, "imageResId": null },
-        { "name": "깐풍기", "price": 30000, "imageResId": null },
-        { "name": "크림새우", "price": 35000, "imageResId": null },
-        { "name": "레몬탕수육", "price": 30000, "imageResId": null },
-        { "name": "꿔바로우", "price": 25000, "imageResId": null }
+        { "name": "도량정식1인", "price": 25000, "imageResId": "menu_07_01" },
+        { "name": "팔보채", "price": 45000, "imageResId": "menu_07_02" },
+        { "name": "마라샹궈(소고기/양고기)", "price": 38000, "imageResId": "menu_07_03" },
+        { "name": "깐풍기", "price": 30000, "imageResId": "menu_07_04" },
+        { "name": "크림새우", "price": 35000, "imageResId": "menu_07_05" },
+        { "name": "레몬탕수육", "price": 30000, "imageResId": "menu_07_06" },
+        { "name": "꿔바로우", "price": 25000, "imageResId": "menu_07_07" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_07_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "1시간",
       "tvShow": "BLACKWHITE",
       "distance": 7.2,
@@ -182,6 +189,7 @@
       "name": "비아 톨레도 파스타바",
       "phoneNumber": "0507-1384-0986",
       "address": "서울시 용산구 원효로83길 7-2 1층",
+      "latitude": 37.560000, "longitude": 127.030000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "17:00 ~ 22:00", "17:00 ~ 22:00", "17:00 ~ 22:00", "17:00 ~ 22:00", "17:00 ~ 22:00", "정기휴무"],
       "menuItems": [
@@ -191,8 +199,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_08_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 2.5,
@@ -205,6 +213,7 @@
       "name": "조광201",
       "phoneNumber": "0507-1392-0503",
       "address": "서울시 송파구 새말로8길 13 2층",
+      "latitude": 37.500000, "longitude": 127.020000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "18:00 ~ 23:00", "18:00 ~ 23:00", "18:00 ~ 23:00", "18:00 ~ 23:00", "18:00 ~ 23:00", "정기휴무"],
       "menuItems": [
@@ -214,8 +223,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_09_main",
+      "allergyIcons": [],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 9.1,
@@ -228,22 +237,23 @@
       "name": "네기스키야키 압구정점",
       "phoneNumber": "02-543-1060",
       "address": "서울시 강남구 논현로 854 지하1층 네기스키야키",
+      "latitude": 37.570000, "longitude": 126.980000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 21:30", "11:30 ~ 21:30"],
       "menuItems": [
-        { "name": "런치 한우 1++ 스키야키 세트", "price": 68000, "imageResId": null },
-        { "name": "런치 미국산 스키야키 세트", "price": 38000, "imageResId": null },
-        { "name": "런치 한우1++ 샤브샤브 세트", "price": 68000, "imageResId": null },
-        { "name": "런치 미국산 샤브샤브 세트", "price": 38000, "imageResId": null },
+        { "name": "런치 한우 1++ 스키야키 세트", "price": 68000, "imageResId": "menu_10_01" },
+        { "name": "런치 미국산 스키야키 세트", "price": 38000, "imageResId": "menu_10_02" },
+        { "name": "런치 한우1++ 샤브샤브 세트", "price": 68000, "imageResId": "menu_10_03" },
+        { "name": "런치 미국산 샤브샤브 세트", "price": 38000, "imageResId": "menu_10_04" },
         { "name": "시그니쳐 한우 1++ 스키야키 코스", "price": 108000, "imageResId": null },
-        { "name": "디너 한우 스키야키 코스", "price": 88000, "imageResId": null }
+        { "name": "디너 한우 스키야키 코스", "price": 88000, "imageResId": "menu_10_06" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_10_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 0.2,
@@ -256,22 +266,23 @@
       "name": "홍보각",
       "phoneNumber": "0507-1381-6479",
       "address": "서울시 강남구 봉은사로 130 노보텔 앰배서더 강남 L",
+      "latitude": 37.520000, "longitude": 127.040000,
       "openingHours": "12:00 ~ 21:30",
       "weeklyHours": ["12:00 ~ 21:30", "12:00 ~ 21:30", "12:00 ~ 21:30", "12:00 ~ 21:30", "12:00 ~ 21:30", "12:00 ~ 21:30", "12:00 ~ 21:30"],
       "menuItems": [
-        { "name": "불도장", "price": 130000, "imageResId": null },
-        { "name": "모자새우", "price": 60000, "imageResId": null },
-        { "name": "탕수육", "price": 48000, "imageResId": null },
-        { "name": "(시즌메뉴)중식냉면", "price": 35000, "imageResId": null },
-        { "name": "Special Course", "price": 150000, "imageResId": null },
+        { "name": "불도장", "price": 130000, "imageResId": "menu_11_01" },
+        { "name": "모자새우", "price": 60000, "imageResId": "menu_11_02" },
+        { "name": "탕수육", "price": 48000, "imageResId": "menu_11_03" },
+        { "name": "(시즌메뉴)중식냉면", "price": 35000, "imageResId": "menu_11_04" },
+        { "name": "Special Course", "price": 150000, "imageResId": null},
         { "name": "Dinner A", "price": 120000, "imageResId": null }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_11_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "0분",
       "tvShow": "BLACKWHITE",
       "distance": 7.3,
@@ -284,11 +295,12 @@
       "name": "터치더스카이",
       "phoneNumber": "0507-1337-5761",
       "address": "서울시 영등포구 63로 50 한화금융센터_63",
+      "latitude": 37.550000, "longitude": 126.980000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
-        { "name": "MASTER CHEF'S 디너", "price": 295000, "imageResId": null },
-        { "name": "CHEF'S SPECIAL 디너", "price": 235000, "imageResId": null },
+        { "name": "MASTER CHEF'S 디너", "price": 295000, "imageResId": "menu_12_01" },
+        { "name": "CHEF'S SPECIAL 디너", "price": 235000, "imageResId": "menu_12_02" },
         { "name": "LECIEL", "price": 185000, "imageResId": null },
         { "name": "MASTER CHEF'S 런치", "price": 250000, "imageResId": null },
         { "name": "CHEF'S SPECIAL 런치", "price": 185000, "imageResId": null },
@@ -298,8 +310,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_12_main",
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 1.1,
@@ -312,31 +324,32 @@
       "name": "진진",
       "phoneNumber": "0507-1447-8879",
       "address": "서울시 마포구 월드컵북로1길 60 1층 진진",
+      "latitude": 37.580000, "longitude": 126.990000,
       "openingHours": "11:30 ~ 21:00",
       "weeklyHours": ["11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "12:00 ~ 21:30"],
       "menuItems": [
-        { "name": "멘보샤(회원가)", "price": 22000, "imageResId": null },
-        { "name": "대게살볶음(회원가)", "price": 29600, "imageResId": null },
-        { "name": "깐풍기(회원가)", "price": 22400, "imageResId": null },
-        { "name": "마파두부(회원가)", "price": 17600, "imageResId": null },
-        { "name": "칭찡우럭(회원가)", "price": 34400, "imageResId": null },
-        { "name": "어향가지(회원가)", "price": 20000, "imageResId": null },
-        { "name": "카이란소고기(회원가)", "price": 31600, "imageResId": null },
-        { "name": "전복팔보채(회원가)", "price": 43200, "imageResId": null },
-        { "name": "간쇼새우(회원가)", "price": 24000, "imageResId": null },
-        { "name": "소고기 양상추 쌈(회원가)", "price": 30000, "imageResId": null },
-        { "name": "홍믄생선(회원가)", "price": 45000, "imageResId": null }
+        { "name": "멘보샤(회원가)", "price": 22000, "imageResId": "menu_13_01" },
+        { "name": "대게살볶음(회원가)", "price": 29600, "imageResId": "menu_13_02" },
+        { "name": "깐풍기(회원가)", "price": 22400, "imageResId": "menu_13_03" },
+        { "name": "마파두부(회원가)", "price": 17600, "imageResId": "menu_13_04" },
+        { "name": "칭찡우럭(회원가)", "price": 34400, "imageResId": "menu_13_05" },
+        { "name": "어향가지(회원가)", "price": 20000, "imageResId": "menu_13_06" },
+        { "name": "카이란소고기(회원가)", "price": 31600, "imageResId": "menu_13_07" },
+        { "name": "전복팔보채(회원가)", "price": 43200, "imageResId": "menu_13_08" },
+        { "name": "간쇼새우(회원가)", "price": 24000, "imageResId": "menu_13_09" },
+        { "name": "소고기 양상추 쌈(회원가)", "price": 30000, "imageResId": "menu_13_10" },
+        { "name": "홍믄생선(회원가)", "price": 45000, "imageResId": "menu_13_11" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_13_main",
+      "allergyIcons": ["milk"],
       "waitTime": "1시간 30분",
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -345,31 +358,32 @@
       "name": "마마리다이닝",
       "phoneNumber": "02-6137-9665",
       "address": "서울시 영등포구 국제금융로 10 IFC몰 L3층 306호",
+      "latitude": 37.540000, "longitude": 127.030000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00"],
       "menuItems": [
-        { "name": "제철 회덮밥 반상", "price": 26000, "imageResId": null },
-        { "name": "마마폴리탄 파스타와 세스크멘슬 소시지", "price": 23000, "imageResId": null },
-        { "name": "마마리 물회반상", "price": 28000, "imageResId": null },
+        { "name": "제철 회덮밥 반상", "price": 26000, "imageResId": "menu_14_01" },
+        { "name": "마마폴리탄 파스타와 세스크멘슬 소시지", "price": 23000, "imageResId": "menu_14_02" },
+        { "name": "마마리 물회반상", "price": 28000, "imageResId": "menu_14_03" },
         { "name": "마마리생선구이와 잡곡밥반상", "price": 26000, "imageResId": null },
-        { "name": "제철 나물밥과 통영 삼치조림", "price": 23000, "imageResId": null },
-        { "name": "소갈비 숯불 스테이크 반상", "price": 26000, "imageResId": null },
-        { "name": "속초 저염 백명란 파스타", "price": 23000, "imageResId": null },
-        { "name": "완도 전복 리조또", "price": 27000, "imageResId": null },
-        { "name": "연근 닭강정", "price": 12000, "imageResId": null },
-        { "name": "문어 바질 샐러드", "price": 17000, "imageResId": null }
+        { "name": "제철 나물밥과 통영 삼치조림", "price": 23000, "imageResId": "menu_14_05" },
+        { "name": "소갈비 숯불 스테이크 반상", "price": 26000, "imageResId": "menu_14_06" },
+        { "name": "속초 저염 백명란 파스타", "price": 23000, "imageResId": "menu_14_07" },
+        { "name": "완도 전복 리조또", "price": 27000, "imageResId": "menu_14_08" },
+        { "name": "연근 닭강정", "price": 12000, "imageResId": "menu_14_09" },
+        { "name": "문어 바질 샐러드", "price": 17000, "imageResId": "menu_14_10" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_14_main",
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "5분",
       "tvShow": "BLACKWHITE",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -377,29 +391,30 @@
       "name": "로컬릿",
       "phoneNumber": "0507-1354-3399",
       "address": "서울시 성동구 한림말길 33 2층",
+      "latitude": 37.520000, "longitude": 127.050000,
       "openingHours": "11:00 ~ 21:00",
       "weeklyHours": ["11:00 ~ 21:00", "정기휴무", "정기휴무", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00"],
       "menuItems": [
-        { "name": "채소테린 플레이트", "price": 16000, "imageResId": null },
-        { "name": "호박 까넬로니", "price": 20000, "imageResId": null },
-        { "name": "가지 라자냐", "price": 17000, "imageResId": null },
-        { "name": "시금치 뇨끼", "price": 19000, "imageResId": null },
-        { "name": "새우 리조또", "price": 24000, "imageResId": null },
-        { "name": "백향과 발로나 초콜렛 무스", "price": 8000, "imageResId": null },
-        { "name": "한우 채끝스테이크", "price": 49000, "imageResId": null },
-        { "name": "딸기 타르트", "price": 8000, "imageResId": null },
-        { "name": "알배추구이", "price": 11000, "imageResId": null }
+        { "name": "채소테린 플레이트", "price": 16000, "imageResId": "menu_15_01" },
+        { "name": "호박 까넬로니", "price": 20000, "imageResId": "menu_15_02" },
+        { "name": "가지 라자냐", "price": 17000, "imageResId": "menu_15_03" },
+        { "name": "시금치 뇨끼", "price": 19000, "imageResId": "menu_15_04" },
+        { "name": "새우 리조또", "price": 24000, "imageResId": "menu_15_05" },
+        { "name": "백향과 발로나 초콜렛 무스", "price": 8000, "imageResId": "menu_15_06" },
+        { "name": "한우 채끝스테이크", "price": 49000, "imageResId": "menu_15_07" },
+        { "name": "딸기 타르트", "price": 8000, "imageResId": "menu_15_08" },
+        { "name": "알배추구이", "price": 11000, "imageResId": "menu_15_09" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_15_main",
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 2.2,
-      "food_type": "베이커리",
+      "food_type": "비건",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","땅콩"]
     },
@@ -408,6 +423,7 @@
       "name": "본연",
       "phoneNumber": "0507-1434-0923",
       "address": "서울시 강남구 논현로 742 7층",
+      "latitude": 37.510000, "longitude": 127.040000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "17:30 ~ 22:30", "17:30 ~ 22:30", "17:30 ~ 22:30", "17:30 ~ 22:30", "17:30 ~ 22:30", "정기휴무"],
       "menuItems": [
@@ -417,13 +433,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_16_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 5.5,
       "food_type": "한식",
-      "restaurant_type": "캐주얼다이닝",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
     {
@@ -431,6 +447,7 @@
       "name": "윤서울",
       "phoneNumber": "0507-1350-3323",
       "address": "서울시 강남구 선릉로 805 1층",
+      "latitude": 37.560000, "longitude": 126.970000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "정기휴무"],
       "menuItems": [
@@ -441,8 +458,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_17_main",
+      "allergyIcons": ["egg"],
       "waitTime": "예약제",
       "tvShow": "BLACKWHITE",
       "distance": 7.7,
@@ -455,12 +472,13 @@
       "name": "가매일식",
       "phoneNumber": "062-352-7711",
       "address": "광주 서구 상무대로 1104-26",
+      "latitude": 37.500000, "longitude": 126.950000,
       "openingHours": "11:30 ~ 21:30",
       "weeklyHours": ["11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30"],
       "menuItems": [
-        { "name": "남도초밥 & 상추튀김텐동", "price": 60000, "imageResId": null },
-        { "name": "남도 생선회 계절 요리(A/B코스)", "price": 80000, "imageResId": null },
-        { "name": "남도 초밥 정식", "price": 80000, "imageResId": null },
+        { "name": "남도초밥 & 상추튀김텐동", "price": 60000, "imageResId": "menu_18_01" },
+        { "name": "남도 생선회 계절 요리(A/B코스)", "price": 80000, "imageResId": "menu_18_02" },
+        { "name": "남도 초밥 정식", "price": 80000, "imageResId": "menu_18_03" },
         { "name": "가매런치정식", "price": 48000, "imageResId": null },
         { "name": "생대구탕정식", "price": 30000, "imageResId": null },
         { "name": "생대구지리정식", "price": 30000, "imageResId": null },
@@ -471,8 +489,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_18_main",
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "BLACKWHITE",
       "distance": 3.2,
@@ -485,10 +503,11 @@
       "name": "팔공산 엄마밥상 다사세천점",
       "phoneNumber": "0504-2015-3154",
       "address": "대구 달성군 다사읍 세천북로7길8",
+      "latitude": 37.510000, "longitude": 126.960000,
       "openingHours": "11:30 ~ 21:00",
       "weeklyHours": ["11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00"],
       "menuItems": [
-        { "name": "점심특선 엄마밥상", "price": 13000, "imageResId": null },
+        { "name": "점심특선 엄마밥상", "price": 13000, "imageResId": "menu_19_01" },
         { "name": "엄마상차림", "price": 16000, "imageResId": null },
         { "name": "엄마한정식", "price": 30000, "imageResId": null }
       ],
@@ -496,13 +515,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_19_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
       "distance": 8.6,
       "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀","조개"]
     },
     {
@@ -510,17 +529,18 @@
       "name": "즐거운술상",
       "phoneNumber": "010-7539-2020",
       "address": "서울 도봉구 노해로 341 117호 창동, 신원리베르텔",
+      "latitude": 37.530000, "longitude": 126.980000,
       "openingHours": "17:00 ~ 20:00",
       "weeklyHours": ["17:00 ~ 20:00", "17:00 ~ 20:00", "17:00 ~ 20:00", "17:00 ~ 20:00", "17:00 ~ 20:00", "17:00 ~ 20:00", "정기휴무"],
       "menuItems": [
-        { "name": "이모카세 1인", "price": 50000, "imageResId": null }
+        { "name": "이모카세 1인", "price": 50000, "imageResId": "menu_20_01" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_20_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "BLACKWHITE",
       "distance": 9.4,
@@ -533,6 +553,7 @@
       "name": "스위츠플래닛",
       "phoneNumber": "02-541-0402",
       "address": "서울 강남구 선릉로131길 23",
+      "latitude": 37.520000, "longitude": 126.990000,
       "openingHours": "11:00 ~ 21:00",
       "weeklyHours": ["11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00"],
       "menuItems": [
@@ -552,13 +573,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_21_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 9.4,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "베이커리",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
     {
@@ -566,6 +587,7 @@
       "name": "토말 본점",
       "phoneNumber": "02-518-0292",
       "address": "서울 강남구 선릉로121길 13",
+      "latitude": 37.560000, "longitude": 127.010000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 21:00", "11:30 ~ 21:00"],
       "menuItems": [
@@ -578,8 +600,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_22_main",
+      "allergyIcons": ["fish", "egg", "clam"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 8.6,
@@ -592,6 +614,7 @@
       "name": "파이어벨 코엑스점",
       "phoneNumber": "0507-1366-8901",
       "address": "서울 강남구 테헤란로87길 46 오크우드 프리미어 코엑스 센터",
+      "latitude": 37.570000, "longitude": 126.960000,
       "openingHours": "11:00 ~ 21:00",
       "weeklyHours": ["11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00"],
       "menuItems": [
@@ -611,12 +634,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_23_main",
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.2,
-      "food_type": "일식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
@@ -625,33 +648,34 @@
       "name": "GOO STK 528",
       "phoneNumber": "02-511-0917",
       "address": "서울 강남구 압구정로 108 덕산빌딩 109호",
+      "latitude": 37.540000, "longitude": 127.000000,
       "openingHours": "10:00 ~ 22:00",
       "weeklyHours": ["10:00 ~ 22:00", "10:00 ~ 22:00", "10:00 ~ 21200", "10:00 ~ 22:00", "10:00 ~ 22:00", "10:00 ~ 22:00", "10:00 ~ 22:00"],
       "menuItems": [
-        { "name": "포터하우스 100g", "price": 39000, "imageResId": null },
-        { "name": "티본 100g", "price": 37000, "imageResId": null },
-        { "name": "본인립아이 100g", "price": 36000, "imageResId": null },
-        { "name": "Wet-Aging 안심 200g", "price": 88000, "imageResId": null },
-        { "name": "Seasonal Raw Oyster", "price": 44000, "imageResId": null },
-        { "name": "Almas Caviar Beluga", "price": 264000, "imageResId": null },
-        { "name": "French Onion Soup", "price": 18000, "imageResId": null },
-        { "name": "Clam Chowder", "price": 18000, "imageResId": null },
-        { "name": "Ceasar Salad", "price": 32000, "imageResId": null },
-        { "name": "Escargot", "price": 35000, "imageResId": null },
-        { "name": "Meatball 3 Pcs", "price": 42000, "imageResId": null }
+        { "name": "포터하우스 100g", "price": 39000, "imageResId": "menu_24_01" },
+        { "name": "티본 100g", "price": 37000, "imageResId": "menu_24_02" },
+        { "name": "본인립아이 100g", "price": 36000, "imageResId": "menu_24_03" },
+        { "name": "Wet-Aging 안심 200g", "price": 88000, "imageResId": "menu_24_04" },
+        { "name": "Seasonal Raw Oyster", "price": 44000, "imageResId": "menu_24_05" },
+        { "name": "Almas Caviar Beluga", "price": 264000, "imageResId": "menu_24_06" },
+        { "name": "French Onion Soup", "price": 18000, "imageResId": "menu_24_07" },
+        { "name": "Clam Chowder", "price": 18000, "imageResId": "menu_24_08" },
+        { "name": "Ceasar Salad", "price": 32000, "imageResId": "menu_24_09" },
+        { "name": "Escargot", "price": 35000, "imageResId": "menu_24_10" },
+        { "name": "Meatball 3 Pcs", "price": 42000, "imageResId": "menu_24_11" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_24_main",
+      "allergyIcons": ["egg"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 7.7,
       "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["달걀"]
     },
     {
@@ -659,24 +683,25 @@
       "name": "스시코마츠",
       "phoneNumber": "02-515-1177",
       "address": "서울 강남구 언주로165길 7-10 1층",
+      "latitude": 37.580000, "longitude": 127.050000,
       "openingHours": "12:00 ~ 22:00",
       "weeklyHours": ["12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
       "menuItems": [
-        { "name": "런치 오마카세", "price": 100000, "imageResId": null },
-        { "name": "디너 오마카세", "price": 200000, "imageResId": null }
+        { "name": "런치 오마카세", "price": 100000, "imageResId": "menu_25_01" },
+        { "name": "디너 오마카세", "price": 200000, "imageResId": "menu_25_02" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_25_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
-      "food_type": "한식",
-      "restaurant_type": "캐주얼다이닝",
+      "food_type": "일식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","조개"]
     },
     {
@@ -684,6 +709,7 @@
       "name": "엘림",
       "phoneNumber": "02-2634-9844",
       "address": "서울 영등포구 선유서로25길 16-1",
+      "latitude": 37.500000, "longitude": 127.040000,
       "openingHours": "11:00 ~ 20:30",
       "weeklyHours": ["11:00 ~ 20:30", "11:00 ~ 20:30", "11:00 ~ 20:30", "11:00 ~ 20:30", "11:00 ~ 20:30", "11:00 ~ 20:30", "정기휴무"],
       "menuItems": [
@@ -698,12 +724,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_26_main",
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
-      "food_type": "베이커리",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","땅콩"]
     },
@@ -712,6 +738,7 @@
       "name": "라이차이",
       "phoneNumber": "032-657-1919",
       "address": "경기 부천시 소사구 경인로 21",
+      "latitude": 37.520000, "longitude": 126.970000,
       "openingHours": "10:30 ~ 21:00",
       "weeklyHours": ["10:30 ~ 21:00", "10:30 ~ 21:00", "10:30 ~ 21:00", "10:30 ~ 21:00", "10:30 ~ 21:00", "10:30 ~ 21:00", "10:30 ~ 21:00"],
       "menuItems": [
@@ -731,13 +758,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_27_main",
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "중식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -745,27 +772,28 @@
       "name": "라멘베라보",
       "phoneNumber": "0507-1348-3239",
       "address": "경북 포항시 남구 효자동길6번길 25-1 1층",
+      "latitude": 37.540000, "longitude": 127.010000,
       "openingHours": "11:30 ~ 19:20",
       "weeklyHours": ["11:30 ~ 19:20", "11:30 ~ 19:20", "11:30 ~ 19:20", "11:30 ~ 19:20", "11:30 ~ 19:20", "11:30 ~ 19:20", "정기휴무"],
       "menuItems": [
-        { "name": "금주의특선-BAT마제소바", "price": 16000, "imageResId": null },
-        { "name": "마제소바", "price": 10000, "imageResId": null },
-        { "name": "베라보시오", "price": 9000, "imageResId": null },
-        { "name": "베라보쇼유", "price": 9000, "imageResId": null },
-        { "name": "명란미니덮밥", "price": 5000, "imageResId": null },
-        { "name": "미니훈연차슈돈부리", "price": 5000, "imageResId": null }
+        { "name": "금주의특선-BAT마제소바", "price": 16000, "imageResId": "menu_28_01" },
+        { "name": "마제소바", "price": 10000, "imageResId": "menu_28_02" },
+        { "name": "베라보시오", "price": 9000, "imageResId": "menu_28_03" },
+        { "name": "베라보쇼유", "price": 9000, "imageResId": "menu_28_04" },
+        { "name": "명란미니덮밥", "price": 5000, "imageResId": "menu_28_05" },
+        { "name": "미니훈연차슈돈부리", "price": 5000, "imageResId": "menu_28_06" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_28_main",
+      "allergyIcons": ["milk"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -774,32 +802,33 @@
       "name": "폴앤폴리나",
       "phoneNumber": "02-033-0185",
       "address": "서울 서대문구 연희로11길 56",
+      "latitude": 37.560000, "longitude": 127.020000,
       "openingHours": "11:00 ~ 18:00",
       "weeklyHours": ["11:00 ~ 18:00", "정기휴무", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00"],
       "menuItems": [
-        { "name": "식빵", "price": 15000, "imageResId": null },
-        { "name": "깜빠뉴", "price": 10000, "imageResId": null },
-        { "name": "뺑오쇼콜라", "price": 4500, "imageResId": null },
-        { "name": "크로와상", "price": 4100, "imageResId": null },
-        { "name": "크랜베리 스콘", "price": 3700, "imageResId": null },
-        { "name": "플레인 스콘", "price": 3700, "imageResId": null },
-        { "name": "치아바타", "price": 3700, "imageResId": null },
-        { "name": "화이트 치아바타", "price": 3300, "imageResId": null },
-        { "name": "스틱 브레첼", "price": 3500, "imageResId": null },
-        { "name": "블랙올리브", "price": 4100, "imageResId": null }
+        { "name": "식빵", "price": 15000, "imageResId": "menu_29_01" },
+        { "name": "깜빠뉴", "price": 10000, "imageResId": "menu_29_02" },
+        { "name": "뺑오쇼콜라", "price": 4500, "imageResId": "menu_29_03" },
+        { "name": "크로와상", "price": 4100, "imageResId": "menu_29_04" },
+        { "name": "크랜베리 스콘", "price": 3700, "imageResId": "menu_29_05" },
+        { "name": "플레인 스콘", "price": 3700, "imageResId": "menu_29_06" },
+        { "name": "치아바타", "price": 3700, "imageResId": "menu_29_07" },
+        { "name": "화이트 치아바타", "price": 3300, "imageResId": "menu_29_08" },
+        { "name": "스틱 브레첼", "price": 3500, "imageResId": "menu_29_09" },
+        { "name": "블랙올리브", "price": 4100, "imageResId": "menu_29_10" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_29_main",
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.1,
-      "food_type": "양식",
-      "restaurant_type": "뷔페",
+      "food_type": "베이커리",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선"]
     },
     {
@@ -807,24 +836,25 @@
       "name": "톰볼라",
       "phoneNumber": "0507-1431-4660",
       "address": "서울 서초구 서래로7길 16",
+      "latitude": 37.530000, "longitude": 127.060000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
-        { "name": "볼로네제라자냐", "price": 28000, "imageResId": null },
-        { "name": "꽃게스파게티", "price": 33000, "imageResId": null },
-        { "name": "양갈비", "price": 65000, "imageResId": null },
-        { "name": "톰볼라 특선 피자", "price": 32000, "imageResId": null }
+        { "name": "볼로네제라자냐", "price": 28000, "imageResId": "menu_30_01" },
+        { "name": "꽃게스파게티", "price": 33000, "imageResId": "menu_30_02" },
+        { "name": "양갈비", "price": 65000, "imageResId": "menu_30_03" },
+        { "name": "톰볼라 특선 피자", "price": 32000, "imageResId": "menu_30_04" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_30_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.3,
-      "food_type": "중식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -833,6 +863,7 @@
       "name": "라싸브어",
       "phoneNumber": "0507-1331-6713",
       "address": "서울 서초구 서래로 24 다솜빌딩 5층",
+      "latitude": 37.570000, "longitude": 126.950000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
@@ -844,13 +875,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_31_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "예약제",
       "tvShow": "WEDNESDAY",
       "distance": 0.2,
-      "food_type": "일식",
-      "restaurant_type": "뷔페",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["우유","조개"]
     },
     {
@@ -858,13 +889,14 @@
       "name": "우동가조쿠",
       "phoneNumber": "0507-1406-2177",
       "address": "서울 성동구 왕십리로 215-1",
+      "latitude": 37.500000, "longitude": 126.940000,
       "openingHours": "11:00 ~ 20:00",
       "weeklyHours": ["11:00 ~ 20:00", "11:00 ~ 20:00", "11:00 ~ 20:00", "11:00 ~ 20:00", "11:00 ~ 20:00", "11:00 ~ 20:00", "11:00 ~ 20:00"],
       "menuItems": [
-        { "name": "붓가케우동", "price": 7500, "imageResId": null },
-        { "name": "가조쿠우동", "price": 8500, "imageResId": null },
-        { "name": "육육우동", "price": 9000, "imageResId": null },
-        { "name": "치즈육육우동", "price": 11000, "imageResId": null },
+        { "name": "붓가케우동", "price": 7500, "imageResId": "menu_32_01" },
+        { "name": "가조쿠우동", "price": 8500, "imageResId": "menu_32_02" },
+        { "name": "육육우동", "price": 9000, "imageResId": "menu_32_03" },
+        { "name": "치즈육육우동", "price": 11000, "imageResId": "menu_32_04" },
         { "name": "가마타마", "price": 9000, "imageResId": null },
         { "name": "라유멘", "price": 10000, "imageResId": null },
         { "name": "키츠네우동", "price": 8000, "imageResId": null },
@@ -877,12 +909,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_32_main",
+      "allergyIcons": [],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
       "distance": 9.1,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": []
     },
@@ -891,25 +923,26 @@
       "name": "봉피양 방이점",
       "phoneNumber": "02-415-5527",
       "address": "서울 송파구 양재대로71길 1-4",
+      "latitude": 37.550000, "longitude": 126.990000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
-        { "name": "돼지목심본갈비", "price": 36000, "imageResId": null },
-        { "name": "한우떡갈비", "price": 30000, "imageResId": null },
-        { "name": "평양냉면", "price": 16000, "imageResId": null },
+        { "name": "돼지목심본갈비", "price": 36000, "imageResId": "menu_33_01" },
+        { "name": "한우떡갈비", "price": 30000, "imageResId": "menu_33_02" },
+        { "name": "평양냉면", "price": 16000, "imageResId": "menu_33_03" },
         { "name": "비빔냉면", "price": 16000, "imageResId": null },
-        { "name": "벽제설렁탕", "price": 19000, "imageResId": null }
+        { "name": "벽제설렁탕", "price": 19000, "imageResId": "menu_33_05" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_33_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "30분",
       "tvShow": "WEDNESDAY",
       "distance": 2.5,
-      "food_type": "양식",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
@@ -918,6 +951,7 @@
       "name": "부첼리하우스",
       "phoneNumber": "02-792-5676",
       "address": "서울 용산구 독서당로 122-1",
+      "latitude": 37.560000, "longitude": 127.010000,
       "openingHours": "11:30 ~ 23:00",
       "weeklyHours": ["11:30 ~ 23:00", "11:30 ~ 23:00", "11:30 ~ 23:00", "11:30 ~ 23:00", "11:30 ~ 23:00", "11:30 ~ 23:00", "11:30 ~ 23:00"],
       "menuItems": [
@@ -940,13 +974,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_34_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "15분",
       "tvShow": "WEDNESDAY",
       "distance": 7.2,
-      "food_type": "중식",
-      "restaurant_type": "캐주얼다이닝",
+      "food_type": "양식",
+      "restaurant_type": "파인다이닝",
       "allergies": ["생선","달걀"]
     },
     {
@@ -954,27 +988,28 @@
       "name": "인도음식점 타지",
       "phoneNumber": "0507-1410-0677",
       "address": "서울 중구 명동길 73 페이지명동 2층",
+      "latitude": 37.580000, "longitude": 126.980000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
-        { "name": "치킨 말라이 빠산", "price": 26000, "imageResId": null },
-        { "name": "치킨 띠까 마살라", "price": 24000, "imageResId": null },
-        { "name": "빨락 빠니르", "price": 24000, "imageResId": null },
-        { "name": "프로운 빈달루", "price": 29000, "imageResId": null },
-        { "name": "로건 조쉬", "price": 26000, "imageResId": null },
-        { "name": "치킨샐러드", "price": 7000, "imageResId": null }
+        { "name": "치킨 말라이 빠산", "price": 26000, "imageResId": "menu_35_01" },
+        { "name": "치킨 띠까 마살라", "price": 24000, "imageResId": "menu_35_02" },
+        { "name": "빨락 빠니르", "price": 24000, "imageResId": "menu_35_03" },
+        { "name": "프로운 빈달루", "price": 29000, "imageResId": "menu_35_04" },
+        { "name": "로건 조쉬", "price": 26000, "imageResId": "menu_35_05" },
+        { "name": "치킨샐러드", "price": 7000, "imageResId": "menu_35_06" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_35_main",
+      "allergyIcons": ["clam"],
       "waitTime": "20분",
       "tvShow": "WEDNESDAY",
       "distance": 10.1,
       "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
     {
@@ -982,10 +1017,11 @@
       "name": "웨스틴 조선 서울 홍연",
       "phoneNumber": "02-317-0494",
       "address": "서울 중구 소공로 106 LL층",
+      "latitude": 37.540000, "longitude": 127.030000,
       "openingHours": "12:00 ~ 22:00",
       "weeklyHours": ["12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
       "menuItems": [
-        { "name": "딤섬 스페셜 코스(평일점심)", "price": 120000, "imageResId": null },
+        { "name": "딤섬 스페셜 코스(평일점심)", "price": 120000, "imageResId": "menu_36_01" },
         { "name": "천생연분(상견례 코스 메뉴)", "price": 235000, "imageResId": null },
         { "name": "런치코스", "price": 270000, "imageResId": null },
         { "name": "디너코스", "price": 450000, "imageResId": null }
@@ -994,13 +1030,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_36_main",
+      "allergyIcons": ["clam", "milk", "fish"],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
       "distance": 2.2,
       "food_type": "중식",
-      "restaurant_type": "캐주얼다이닝",
+      "restaurant_type": "파인다이닝",
       "allergies": ["조개","우유","생선"]
     },
     {
@@ -1008,6 +1044,7 @@
       "name": "우래옥",
       "phoneNumber": "02-2265-0151",
       "address": "서울 중구 창경궁로 63-29",
+      "latitude": 37.510000, "longitude": 127.050000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00"],
       "menuItems": [
@@ -1030,13 +1067,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_37_main",
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "40분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1044,6 +1081,7 @@
       "name": "비야게레로",
       "phoneNumber": "02-538-8915",
       "address": "서울 강남구 봉은사로78길 12 101호",
+      "latitude": 37.500000, "longitude": 127.020000,
       "openingHours": "휴무",
       "weeklyHours": ["휴무", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "휴무"],
       "menuItems": [
@@ -1056,13 +1094,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_38_main",
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 3.7,
-      "food_type": "베이커리",
-      "restaurant_type": "파인다이닝",
+      "food_type": "양식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1070,14 +1108,15 @@
       "name": "프롬하노이",
       "phoneNumber": "0507-1437-0301",
       "address": "서울 마포구 월드컵로13길 55-5 1층",
+      "latitude": 37.570000, "longitude": 126.980000,
       "openingHours": "11:00 ~ 21:00",
       "weeklyHours": ["11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00"],
       "menuItems": [
-        { "name": "우삼겹쌀국수", "price": 11000, "imageResId": null },
-        { "name": "양지쌀국수", "price": 12000, "imageResId": null },
-        { "name": "모듬쌀국수", "price": 13000, "imageResId": null },
-        { "name": "하노이분짜", "price": 13000, "imageResId": null },
-        { "name": "반쎄오", "price": 17000, "imageResId": null },
+        { "name": "우삼겹쌀국수", "price": 11000, "imageResId": "menu_39_01" },
+        { "name": "양지쌀국수", "price": 12000, "imageResId": "menu_39_02" },
+        { "name": "모듬쌀국수", "price": 13000, "imageResId": "menu_39_03" },
+        { "name": "하노이분짜", "price": 13000, "imageResId": "menu_39_04" },
+        { "name": "반쎄오", "price": 17000, "imageResId": "menu_39_05" },
         { "name": "짜조", "price": 5500, "imageResId": null },
         { "name": "통왕새우튀김", "price": 2500, "imageResId": null }
 
@@ -1086,12 +1125,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_39_main",
+      "allergyIcons": ["milk"],
       "waitTime": "0분",
       "tvShow": "WEDNESDAY",
       "distance": 1.4,
-      "food_type": "양식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1100,27 +1139,28 @@
       "name": "나노하나",
       "phoneNumber": "0507-1406-2009",
       "address": "서울 서초구 서초대로73길 42 강남역리가스퀘어 107호",
+      "latitude": 37.520000, "longitude": 127.040000,
       "openingHours": "11:30 ~ 24:00",
       "weeklyHours": ["11:30 ~ 24:00", "11:30 ~ 24:00", "11:30 ~ 24:00", "11:30 ~ 01:00", "11:00 ~ 02:00", "15:30 ~ 02:00", "15:00 ~ 24:00"],
       "menuItems": [
-        { "name": "2인 모듬숙성회", "price": 29900, "imageResId": null },
-        { "name": "육사시미", "price": 25000, "imageResId": null },
-        { "name": "쿠시카츠6종", "price": 18000, "imageResId": null },
-        { "name": "오꼬노미야끼", "price": 16000, "imageResId": null },
-        { "name": "전복내장파스타", "price": 26000, "imageResId": null }
+        { "name": "2인 모듬숙성회", "price": 29900, "imageResId": "menu_40_01" },
+        { "name": "육사시미", "price": 25000, "imageResId": "menu_40_02" },
+        { "name": "쿠시카츠6종", "price": 18000, "imageResId": "menu_40_03" },
+        { "name": "오꼬노미야끼", "price": 16000, "imageResId": "menu_40_04" },
+        { "name": "전복내장파스타", "price": 26000, "imageResId": "menu_40_05" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_40_main",
+      "allergyIcons": ["clam", "fish", "egg"],
       "waitTime": "10분",
       "tvShow": "WEDNESDAY",
       "distance": 0.7,
       "food_type": "일식",
-      "restaurant_type": "파인다이닝",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선","달걀"]
     },
     {
@@ -1128,10 +1168,11 @@
       "name": "몽탄",
       "phoneNumber": "0507-1418-8592",
       "address": "서울 용산구 백범로99길 50",
+      "latitude": 37.539707, "longitude": 126.886666,
       "openingHours": "12:00 ~ 22:00",
       "weeklyHours": ["12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
       "menuItems": [
-        { "name": "우대갈비", "price": 34000, "imageResId": null },
+        { "name": "우대갈비", "price": 34000, "imageResId": "menu_41_01" },
         { "name": "짚불항정살", "price": 17000, "imageResId": null },
         { "name": "트러플계란찜", "price": 13000, "imageResId": null },
         { "name": "들기름유자샐러드", "price": 15000, "imageResId": null },
@@ -1146,8 +1187,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_41_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 9.4,
@@ -1160,22 +1201,23 @@
       "name": "바다회사랑",
       "phoneNumber": "02-338-0872",
       "address": "서울 마포구 동교로27길 60",
+      "latitude": 37.540000, "longitude": 127.030000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "14:30 ~ 22:40", "14:30 ~ 22:40", "14:30 ~ 22:40", "14:30 ~ 22:40", "14:30 ~ 22:40", "14:30 ~ 22:40"],
       "menuItems": [
-        { "name": "키조개", "price": 25000, "imageResId": null }
+        { "name": "키조개", "price": 25000, "imageResId": "menu_42_01" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_42_main",
+      "allergyIcons": ["fish", "egg", "clam"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 8.6,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "일식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀","조개"]
     },
     {
@@ -1183,6 +1225,7 @@
       "name": "노티드 안국",
       "phoneNumber": "0507-1401-9377",
       "address": "서울 종로구 북촌로 6-3 1층",
+      "latitude": 37.550000, "longitude": 126.990000,
       "openingHours": "10:00 ~ 21:00",
       "weeklyHours": ["10:00 ~ 21:00", "10:00 ~ 21:00", "10:00 ~ 21:00", "10:00 ~ 21:00", "10:00 ~ 21:00", "10:00 ~ 21:00", "10:00 ~ 21:00"],
       "menuItems": [
@@ -1195,12 +1238,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_43_main",
+      "allergyIcons": ["clam"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 3.2,
-      "food_type": "일식",
+      "food_type": "베이커리",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
@@ -1209,30 +1252,31 @@
       "name": "해목 논현점",
       "phoneNumber": "0507-1466-0277",
       "address": "서울 강남구 선릉로145길 14",
+      "latitude": 37.560000, "longitude": 127.010000,
       "openingHours": "12:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00"],
       "menuItems": [
-        { "name": "히츠마부시", "price": 40000, "imageResId": null },
-        { "name": "특카이센동", "price": 52000, "imageResId": null },
-        { "name": "참치+연어+네기도로", "price": 25000, "imageResId": null },
-        { "name": "모둠튀김", "price": 13000, "imageResId": null },
-        { "name": "연어 사시미", "price": 29000, "imageResId": null },
-        { "name": "마구로 타다키", "price": 19000, "imageResId": null },
-        { "name": "생굴후라이", "price": 13000, "imageResId": null },
-        { "name": "카키무시모노", "price": 24000, "imageResId": null },
-        { "name": "모찌리도후", "price": 9000, "imageResId": null }
+        { "name": "히츠마부시", "price": 40000, "imageResId": "menu_44_01" },
+        { "name": "특카이센동", "price": 52000, "imageResId": "menu_44_02" },
+        { "name": "참치+연어+네기도로", "price": 25000, "imageResId": "menu_44_03" },
+        { "name": "모둠튀김", "price": 13000, "imageResId": "menu_44_04" },
+        { "name": "연어 사시미", "price": 29000, "imageResId": "menu_44_05" },
+        { "name": "마구로 타다키", "price": 19000, "imageResId": "menu_44_06" },
+        { "name": "생굴후라이", "price": 13000, "imageResId": "menu_44_07" },
+        { "name": "카키무시모노", "price": 24000, "imageResId": "menu_44_08" },
+        { "name": "모찌리도후", "price": 9000, "imageResId": "menu_44_09" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_44_main",
+      "allergyIcons": ["egg"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.7,
-      "food_type": "양식",
+      "food_type": "일식",
       "restaurant_type": "파인다이닝",
       "allergies": ["달걀"]
     },
@@ -1241,6 +1285,7 @@
       "name": "웍셔너리",
       "phoneNumber": "0507-1471-9878",
       "address": "서울 강남구 도산대로53길 12 1층",
+      "latitude": 37.570000, "longitude": 126.960000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00"],
       "menuItems": [
@@ -1254,12 +1299,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_45_main",
+      "allergyIcons": ["fish", "clam"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
-      "food_type": "한식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","조개"]
     },
@@ -1268,6 +1313,7 @@
       "name": "총각네붕어빵",
       "phoneNumber": "0507-1320-2672",
       "address": "서울 종로구 창경궁로 88 광장시장 남1문 입구",
+      "latitude": 37.500000, "longitude": 126.950000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "12:00 ~ 17:00", "12:00 ~ 17:00", "12:00 ~ 17:00", "정기휴무", "12:00 ~ 17:00", "12:00 ~ 17:00"],
       "menuItems": [
@@ -1282,8 +1328,8 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_46_main",
+      "allergyIcons": ["milk", "peanut"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 2.2,
@@ -1296,14 +1342,15 @@
       "name": "송계옥 성수점",
       "phoneNumber": "없음",
       "address": "서울시 성동구 아차산로11길 11 1층",
+      "latitude": 37.510000, "longitude": 126.960000,
       "openingHours": "11:30 ~ 22:00",
       "weeklyHours": ["11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "11:30 ~ 22:00", "15:00 ~ 22:00", "15:00 ~ 22:00"],
       "menuItems": [
-        { "name": "닭구이 모둠 대", "price": 44000, "imageResId": null },
-        { "name": "송계옥 비빔면", "price": 9000, "imageResId": null },
-        { "name": "하이볼 얼그레이", "price": 8500, "imageResId": null },
-        { "name": "(점심한정)닭국수전골", "price": 15000, "imageResId": null },
-        { "name": "의성마늘볶음밥", "price": 7000, "imageResId": null },
+        { "name": "닭구이 모둠 대", "price": 44000, "imageResId": "menu_47_01" },
+        { "name": "송계옥 비빔면", "price": 9000, "imageResId": "menu_47_02" },
+        { "name": "하이볼 얼그레이", "price": 8500, "imageResId": "menu_47_03" },
+        { "name": "(점심한정)닭국수전골", "price": 15000, "imageResId": "menu_47_04" },
+        { "name": "의성마늘볶음밥", "price": 7000, "imageResId": "menu_47_05" },
         { "name": "몽탄냉면", "price": 8000, "imageResId": null },
         { "name": "된장찌개", "price": 9000, "imageResId": null },
         { "name": "양파볶음밥", "price": 5000, "imageResId": null },
@@ -1314,13 +1361,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_47_main",
+      "allergyIcons": ["peanut", "egg", "milk"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩","달걀","우유"]
     },
     {
@@ -1328,26 +1375,27 @@
       "name": "하니칼국수",
       "phoneNumber": "02-3298-6909",
       "address": "서울 중구 퇴계로 411-15",
+      "latitude": 37.530000, "longitude": 126.980000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 23:00", "11:00 ~ 23:00", "11:00 ~ 23:00"],
       "menuItems": [
-        { "name": "알곤이 칼국수", "price": 12000, "imageResId": null },
-        { "name": "새우 칼국수", "price": 10000, "imageResId": null },
-        { "name": "하니 보쌈", "price": 24000, "imageResId": null },
-        { "name": "하니 모둠전", "price": 26000, "imageResId": null },
-        { "name": "알곤이전골(포장) 비조리", "price": 33000, "imageResId": null }
+        { "name": "알곤이 칼국수", "price": 12000, "imageResId": "menu_48_01" },
+        { "name": "새우 칼국수", "price": 10000, "imageResId": "menu_48_02" },
+        { "name": "하니 보쌈", "price": 24000, "imageResId": "menu_48_03" },
+        { "name": "하니 모둠전", "price": 26000, "imageResId": "menu_48_04" },
+        { "name": "알곤이전골(포장) 비조리", "price": 33000, "imageResId": "menu_48_05" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_48_main",
+      "allergyIcons": ["milk"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 5.5,
-      "food_type": "베이커리",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1356,27 +1404,28 @@
       "name": "고도식",
       "phoneNumber": "02-422-8692",
       "address": "서울 송파구 백제고분로45길 28",
+      "latitude": 37.520000, "longitude": 126.990000,
       "openingHours": "12:00 ~ 22:40",
       "weeklyHours": ["12:00 ~ 22:40", "12:00 ~ 22:40", "12:00 ~ 22:40", "12:00 ~ 22:40", "12:00 ~ 22:40", "12:00 ~ 22:40", "12:00 ~ 22:40"],
       "menuItems": [
-        { "name": "알등심 160g", "price": 17000, "imageResId": null },
-        { "name": "청어알 한우육회 100g", "price": 17000, "imageResId": null },
-        { "name": "철판볶음밥", "price": 7000, "imageResId": null },
-        { "name": "삼겹살 160g", "price": 17000, "imageResId": null },
-        { "name": "천겹살 180g", "price": 16000, "imageResId": null }
+        { "name": "알등심 160g", "price": 17000, "imageResId": "menu_49_01" },
+        { "name": "청어알 한우육회 100g", "price": 17000, "imageResId": "menu_49_02" },
+        { "name": "철판볶음밥", "price": 7000, "imageResId": "menu_49_03" },
+        { "name": "삼겹살 160g", "price": 17000, "imageResId": "menu_49_04" },
+        { "name": "천겹살 180g", "price": 16000, "imageResId": "menu_49_05" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_49_main",
+      "allergyIcons": ["clam", "fish"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 1.1,
-      "food_type": "양식",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","생선"]
     },
     {
@@ -1384,6 +1433,7 @@
       "name": "진작다이닝 성수점",
       "phoneNumber": "0507-1357-7415",
       "address": "서울 성동구 왕십리로14나길 10",
+      "latitude": 37.560000, "longitude": 127.010000,
       "openingHours": "11:30 ~ 21:00",
       "weeklyHours": ["11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00", "11:30 ~ 21:00"],
       "menuItems": [
@@ -1398,12 +1448,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_50_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 7.3,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -1412,6 +1462,7 @@
       "name": "그믐족발 본점",
       "phoneNumber": "0507-1350-6453",
       "address": "서울시 영등포구 경인로79길 21 1층",
+      "latitude": 37.570000, "longitude": 126.960000,
       "openingHours": "정기휴무",
       "weeklyHours": ["정기휴무", "16:00 ~ 22:30", "16:00 ~ 22:30", "16:00 ~ 22:30", "16:00 ~ 22:30", "16:00 ~ 22:30", "16:00 ~ 22:30"],
       "menuItems": [
@@ -1428,13 +1479,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_51_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.2,
-      "food_type": "일식",
-      "restaurant_type": "뷔페",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
     {
@@ -1442,53 +1493,55 @@
       "name": "꽈페 황리단길점",
       "phoneNumber": "054-744-7003",
       "address": "경북 경주시 첨성로81번길 15-1",
+      "latitude": 37.540000, "longitude": 127.000000,
       "openingHours": "11:00 ~ 18:00",
       "weeklyHours": ["11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00", "11:00 ~ 18:00"],
       "menuItems": [
-        { "name": "첨성대 트위스트", "price": 4700, "imageResId": null },
-        { "name": "유니콘 트위스트", "price": 3500, "imageResId": null },
-        { "name": "솔티드 카라멜 트위스트", "price": 3900, "imageResId": null },
-        { "name": "티라미수 트위스트", "price": 4300, "imageResId": null }
+        { "name": "첨성대 트위스트", "price": 4700, "imageResId": "menu_52_01" },
+        { "name": "유니콘 트위스트", "price": 3500, "imageResId": "menu_52_02" },
+        { "name": "솔티드 카라멜 트위스트", "price": 3900, "imageResId": "menu_52_03" },
+        { "name": "티라미수 트위스트", "price": 4300, "imageResId": "menu_52_04" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_52_main",
+      "allergyIcons": ["egg", "milk"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 9.1,
-      "food_type": "중식",
+      "food_type": "베이커리",
       "restaurant_type": "캐주얼다이닝",
-      "allergies": []
+      "allergies": ["달걀","우유"]
     },
     {
       "id": 53,
       "name": "땀땀",
       "phoneNumber": "02-554-8892",
       "address": "서울 강남구 강남대로98길 12-5",
+      "latitude": 37.580000, "longitude": 127.050000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00"],
       "menuItems": [
-        { "name": "프리미엄 보양 쌀국수", "price": 17000, "imageResId": null },
-        { "name": "매운 소곱창 쌀국수", "price": 16000, "imageResId": null },
-        { "name": "매운한우소곱창쌀국수", "price": 24000, "imageResId": null },
-        { "name": "양지쌀국수", "price": 11000, "imageResId": null },
-        { "name": "우삼겹 쌀국수", "price": 12000, "imageResId": null }
+        { "name": "프리미엄 보양 쌀국수", "price": 17000, "imageResId": "menu_53_01" },
+        { "name": "매운 소곱창 쌀국수", "price": 16000, "imageResId": "menu_53_02"},
+        { "name": "매운한우소곱창쌀국수", "price": 24000, "imageResId": "menu_53_03" },
+        { "name": "양지쌀국수", "price": 11000, "imageResId": "menu_53_04" },
+        { "name": "우삼겹 쌀국수", "price": 12000, "imageResId": "menu_53_05" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_53_main",
+      "allergyIcons": ["milk", "clam"],
       "waitTime": "30분",
       "tvShow": "LINEUP",
       "distance": 2.5,
-      "food_type": "양식",
+      "food_type": "중식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유","조개"]
     },
@@ -1497,25 +1550,26 @@
       "name": "온천집",
       "phoneNumber": "0507-1378-8218",
       "address": "서울 종로구 돈화문로11나길 31-8",
+      "latitude": 37.500000, "longitude": 127.040000,
       "openingHours": "11:30 ~ 21:30",
       "weeklyHours": ["11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30"],
       "menuItems": [
-        { "name": "온천 곰 샤브", "price": 29000, "imageResId": null },
-        { "name": "온천 곰 차돌샤브", "price": 36000, "imageResId": null },
-        { "name": "온천집 1인 차돌된장 샤브 3단", "price": 28000, "imageResId": null },
-        { "name": "비프 스테이크 덮밥", "price": 25000, "imageResId": null }
+        { "name": "온천 곰 샤브", "price": 29000, "imageResId": "menu_54_01" },
+        { "name": "온천 곰 차돌샤브", "price": 36000, "imageResId": "menu_54_02" },
+        { "name": "온천집 1인 차돌된장 샤브 3단", "price": 28000, "imageResId": "menu_54_03" },
+        { "name": "비프 스테이크 덮밥", "price": 25000, "imageResId": "menu_54_04" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_54_main",
+      "allergyIcons": ["fish", "egg"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 7.2,
-      "food_type": "중식",
+      "food_type": "일식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["생선","달걀"]
     },
@@ -1524,6 +1578,7 @@
       "name": "무탄 압구정 본점",
       "phoneNumber": "0507-1313-9339",
       "address": "서울 강남구 논현로176길 22 1층",
+      "latitude": 37.520000, "longitude": 126.970000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00"],
       "menuItems": [
@@ -1542,13 +1597,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_55_main",
+      "allergyIcons": ["clam"],
       "waitTime": "15",
       "tvShow": "LINEUP",
       "distance": 10.1,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개"]
     },
     {
@@ -1556,25 +1611,26 @@
       "name": "플롭 안국",
       "phoneNumber": "0507-1394-1284",
       "address": "서울 종로구 북촌로2길 5",
+      "latitude": 37.540000, "longitude": 127.010000,
       "openingHours": "11:30 ~ 21:30",
       "weeklyHours": ["11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30", "11:30 ~ 21:30"],
       "menuItems": [
-        { "name": "네 가지 맛 쿼터L", "price": 28000, "imageResId": null },
-        { "name": "두 가지 맛 하프앤하프L", "price": 27000, "imageResId": null },
-        { "name": "치즈크러스트 추가 S", "price": 3000, "imageResId": null },
-        { "name": "토마토 펜네 오븐 파스타", "price": 13000, "imageResId": null },
-        { "name": "버터 갈릭 프라이즈", "price": 8500, "imageResId": null }
+        { "name": "네 가지 맛 쿼터L", "price": 28000, "imageResId": "menu_56_01" },
+        { "name": "두 가지 맛 하프앤하프L", "price": 27000, "imageResId": "menu_56_02" },
+        { "name": "치즈크러스트 추가 S", "price": 3000, "imageResId": "menu_56_03" },
+        { "name": "토마토 펜네 오븐 파스타", "price": 13000, "imageResId": "menu_56_04" },
+        { "name": "버터 갈릭 프라이즈", "price": 8500, "imageResId": "menu_56_05" }
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_56_main",
+      "allergyIcons": ["clam", "milk", "fish"],
       "waitTime": "20분",
       "tvShow": "LINEUP",
       "distance": 2.2,
-      "food_type": "중식",
+      "food_type": "양식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유","생선"]
     },
@@ -1583,27 +1639,28 @@
       "name": "난포",
       "phoneNumber": "0507-1425-1540",
       "address": "서울 성동구 서울숲4길 18-8 지층",
+      "latitude": 37.560000, "longitude": 127.020000,
       "openingHours": "11:00 ~ 21:30",
       "weeklyHours": ["11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30", "11:00 ~ 21:30"],
       "menuItems": [
-        { "name": "한우육회 묵은지말이", "price": 14000, "imageResId": null },
-        { "name": "한우불고기쌈밥", "price": 18000, "imageResId": null },
-        { "name": "제철횧묵은지말이", "price": 14000, "imageResId": null },
-        { "name": "강된장쌈밥", "price": 12000, "imageResId": null },
-        { "name": "곰국", "price": 15000, "imageResId": null }
+        { "name": "한우육회 묵은지말이", "price": 14000, "imageResId": "menu_57_01" },
+        { "name": "한우불고기쌈밥", "price": 18000, "imageResId": "menu_57_02" },
+        { "name": "제철횧묵은지말이", "price": 14000, "imageResId": "menu_57_03" },
+        { "name": "강된장쌈밥", "price": 12000, "imageResId": "menu_57_04" },
+        { "name": "곰국", "price": 15000, "imageResId": "menu_57_05" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_57_main",
+      "allergyIcons": ["clam", "milk"],
       "waitTime": "25분",
       "tvShow": "LINEUP",
       "distance": 3.7,
-      "food_type": "양식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "한식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["조개","우유"]
     },
     {
@@ -1611,6 +1668,7 @@
       "name": "더키더키",
       "phoneNumber": "0507-1441-5288",
       "address": "경북 경주시 포석로 753",
+      "latitude": 37.530000, "longitude": 127.060000,
       "openingHours": "11:00 ~ 21:00",
       "weeklyHours": ["11:00 ~ 21:00", "정기휴무", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00", "11:00 ~ 21:00"],
       "menuItems": [
@@ -1625,12 +1683,12 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_58_main",
+      "allergyIcons": ["milk"],
       "waitTime": "0분",
       "tvShow": "LINEUP",
       "distance": 1.4,
-      "food_type": "양식",
+      "food_type": "한식",
       "restaurant_type": "캐주얼다이닝",
       "allergies": ["우유"]
     },
@@ -1639,6 +1697,7 @@
       "name": "선데이 버거 클럽",
       "phoneNumber": "02-6080-8213",
       "address": "서울 강남구 언주로170길 37 201호",
+      "latitude": 37.570000, "longitude": 126.950000,
       "openingHours": "11:00 ~ 21:20",
       "weeklyHours": ["11:00 ~ 21:20", "11:00 ~ 21:20", "11:00 ~ 21:20", "11:00 ~ 21:20", "11:00 ~ 21:20", "11:00 ~ 21:20", "11:00 ~ 21:20"],
       "menuItems": [
@@ -1652,13 +1711,13 @@
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_59_main",
+      "allergyIcons": ["peanut"],
       "waitTime": "10분",
       "tvShow": "LINEUP",
       "distance": 0.7,
-      "food_type": "한식",
-      "restaurant_type": "파인다이닝",
+      "food_type": "양식",
+      "restaurant_type": "캐주얼다이닝",
       "allergies": ["땅콩"]
     },
     {
@@ -1666,27 +1725,28 @@
       "name": "한미옥",
       "phoneNumber": "02-545-4622",
       "address": "서울 강남구 선릉로 822 지하 1층",
+      "latitude": 37.620000, "longitude": 126.900000,
       "openingHours": "11:00 ~ 22:00",
       "weeklyHours": ["11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "11:00 ~ 22:00", "12:00 ~ 22:00", "12:00 ~ 22:00"],
       "menuItems": [
-        { "name": "한세트(2~3인)", "price": 130000, "imageResId": null },
-        { "name": "차돌구절판(소)", "price": 59000, "imageResId": null },
-        { "name": "채끝등심삼합 한판", "price": 69000, "imageResId": null },
-        { "name": "특안심삼합 한판", "price": 79000, "imageResId": null }
+        { "name": "한세트(2~3인)", "price": 130000, "imageResId": "menu_60_01" },
+        { "name": "차돌구절판(소)", "price": 59000, "imageResId": "menu_60_02" },
+        { "name": "채끝등심삼합 한판", "price": 69000, "imageResId": "menu_60_03" },
+        { "name": "특안심삼합 한판", "price": 79000, "imageResId": "menu_60_04" }
 
       ],
       "reviews": [
         { "userName": "A", "content": "맛있어요!", "userImageResId": null },
         { "userName": "B", "content": "서비스가 좋아요.", "userImageResId": null }
       ],
-      "imageResId": null,
-      "allergyIcons": [4, 5],
+      "imageResId": "restaurant_60_main",
+      "allergyIcons": ["egg", "milk", "clam"],
       "waitTime": "15분",
       "tvShow": "LINEUP",
       "distance": 4.4,
-      "food_type": "비건",
-      "restaurant_type": "뷔페",
-      "allergies": ["땅콩","달걀","우유"]
+      "food_type": "양식",
+      "restaurant_type": "캐주얼",
+      "allergies": ["달걀","우유","조개"]
     }
   ]
 }
