@@ -119,7 +119,7 @@ class MapViewModel : ViewModel() {
                     position = location.latLng
                     this.map = map
                     captionText = location.caption
-                    captionTextSize = 17f
+                    captionTextSize = 16f
                     isHideCollidedCaptions = true // 일부 가게명만 보임
                     iconTintColor = when (location) {
                         in black -> 0xFF8B00FF.toInt()

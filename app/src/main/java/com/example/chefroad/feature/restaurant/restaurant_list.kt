@@ -112,7 +112,7 @@ fun restaurant_list(
                     modifier = Modifier.weight(1f),
                     textAlign = TextAlign.Center
                 )
-                IconButton(onClick = { /* 추가 기능 */ }) {
+                IconButton(onClick = { navController.navigate("filter") }) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.List,
                         contentDescription = "filtering",

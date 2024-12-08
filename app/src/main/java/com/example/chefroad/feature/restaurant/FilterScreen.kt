@@ -18,12 +18,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,41 +46,24 @@ import com.example.chefroad.ui.theme.Purple1
 import com.example.chefroad.ui.theme.Purple2
 
 @Composable
-fun FilterScreen(
-    navController: NavController,
-    viewModel: FilterViewModel = viewModel()
-) {
-    var isFilterVisible by remember { mutableStateOf(false) }
-
+fun FilterScreen(navController: NavController, viewModel: FilterViewModel = viewModel()) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
-        //RestaurantScreen(navControlle)
-
-        IconButton(
-            onClick = { isFilterVisible = !isFilterVisible },
-            modifier = Modifier.align(Alignment.TopEnd)
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 16.dp),
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.List,
-                contentDescription = "filter",
-            )
-        }
-
-        AnimatedVisibility(
-            visible = isFilterVisible,
-            enter = slideInVertically(initialOffsetY = { it }),
-            exit = slideOutVertically(targetOffsetY = { it }),
-            modifier = Modifier.align(Alignment.BottomCenter)
-        ) {
+            Spacer(modifier = Modifier.height(6.dp))
             FilterContent(
                 onApply = {
-                    isFilterVisible = false
                     navController.previousBackStackEntry?.savedStateHandle?.set("filters", viewModel.currentFilters.value)
                 },
-                onCancel = { isFilterVisible = false },
+                onCancel = { navController.navigate("restaurants/{tvShow}") },
                 onReset = { viewModel.resetFilters() }
             )
         }
@@ -85,7 +71,11 @@ fun FilterScreen(
 }
 
 @Composable
-fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit) {
+fun FilterContent(
+    onApply: () -> Unit,
+    onCancel: () -> Unit,
+    onReset: () -> Unit
+) {
     val foodTypes = listOf("한식", "양식", "중식", "일식", "비건", "베이커리")
     val resTypes = listOf("뷔페", "파인다이닝", "캐주얼다이닝")
     val moneyRanges= listOf("10,000원~20,000원", "20,000원~30,000원", "30,000원~40,000원", "40,000원~")
@@ -97,7 +87,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
     val selectedAllergyTypes = remember { mutableStateOf<Set<String>>(setOf()) }
 
     Surface(
-        modifier = Modifier.fillMaxWidth().height(820.dp).padding(16.dp),
+        modifier = Modifier.fillMaxWidth().height(800.dp).padding(16.dp),
         color = MaterialTheme.colorScheme.surface,
         shadowElevation = 8.dp,
         shape = RoundedCornerShape(16.dp)
@@ -109,7 +99,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                     .padding(bottom = 16.dp)
             ) {
                 Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    imageVector = Icons.Default.ArrowBack,
                     contentDescription = "cancel",
                     modifier = Modifier
                         .align(Alignment.CenterStart)
@@ -123,11 +113,11 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
-            HorizontalDivider(color = DarkGray, thickness = 1.dp)
-            Spacer(modifier = Modifier.height(12.dp))
+            Divider(color = DarkGray, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(16.dp))
 
             Text(text = "음식 종류", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             val groupedFoodTypes = foodTypes.chunked(3)
 
             groupedFoodTypes.forEach { group ->
@@ -168,11 +158,11 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                 Spacer(modifier = Modifier.height(6.dp))
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
-            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(16.dp))
             Text(text = "식당 유형", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
@@ -208,11 +198,11 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                 }
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
-            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(16.dp))
             Text(text = "금액 (메인 메뉴 기준)", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             val groupedMoneyRanges = moneyRanges.chunked(2)
 
             groupedMoneyRanges.forEach { group ->
@@ -253,11 +243,11 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                 Spacer(modifier = Modifier.height(6.dp))
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
-            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(16.dp))
+            Divider(color = Color.LightGray, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(16.dp))
             Text(text = "알레르기", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(10.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
@@ -293,7 +283,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                 }
             }
 
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(modifier = Modifier.height(36.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()

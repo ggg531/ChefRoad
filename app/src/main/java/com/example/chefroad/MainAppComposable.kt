@@ -39,7 +39,7 @@ fun MainApp() {
 
         Scaffold(
             bottomBar = {
-                if (currentRoute in listOf("home", "map", "restaurants/{tvShow}", "mypage")) {
+                if (currentRoute in listOf("home", "map", "restaurants/{tvShow}", "restaurant_detail/{restaurantName}", "my")) {
                     BottomBar(navController = navController)
                 }
             }
