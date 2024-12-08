@@ -1,11 +1,9 @@
 package com.example.chefroad.feature.map
 
-import android.util.Log
+import android.graphics.Color
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.chefroad.feature.data.model.LocationMap
-import com.example.chefroad.feature.data.model.TvShow
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.geometry.LatLngBounds
 import com.naver.maps.map.CameraUpdate
@@ -14,81 +12,93 @@ import com.naver.maps.map.overlay.Marker
 
 class MapViewModel : ViewModel() {
     private var naverMap: NaverMap? = null
-
-    private val _locations = MutableLiveData<List<LocationMap>>()
-    val locations: LiveData<List<LocationMap>> get() = _locations
-
-    private val _filterState = MutableLiveData<TvShow?>()
-    val filterState: LiveData<TvShow?> get() = _filterState
-
+    private val black = listOf(
+        LocationData(
+            LatLng(37.501339, 127.122653),
+            "조광201"
+        ),
+        LocationData(
+            LatLng(37.630186, 127.041268),
+            "깃든"
+        )
+    )
+    private val wednesday = listOf(
+        LocationData(
+            LatLng(37.539707, 126.886666),
+            "길풍식당"
+        ),
+        LocationData(
+            LatLng(37.570125, 126.987034),
+            "일미식당"
+        )
+    )
+    private val line = listOf(
+        LocationData(
+            LatLng(37.5615, 126.9253),
+            "바다회사랑"
+        ),
+        LocationData(
+            LatLng(37.539707, 126.886666),
+            "몽탄"
+        )
+    )
     private val markers = mutableListOf<Marker>()
-
+    private val _filterState = MutableLiveData<String?>()
+    val filterState: LiveData<String?> = _filterState
     fun initializeMap(map: NaverMap) {
         naverMap = map
-        if (_locations.value.isNullOrEmpty()) {
-            Log.w("MapViewModel", "Locations data not ready. Delaying map setup.")
-        } else {
-            setupMapSettings()
-            addMarkers(null)
-        }
+        setupMapSettings()
+        addMarkers(null)
     }
-
     private fun setupMapSettings() {
         naverMap?.apply {
+            mapType = NaverMap.MapType.Basic
             val boundsBuilder = LatLngBounds.Builder()
-
-            // 데이터가 null이거나 비어 있을 경우 기본 처리
-            val allLocations = _locations.value
-            if (allLocations.isNullOrEmpty()) {
-                moveCamera(CameraUpdate.scrollTo(LatLng(37.5665, 126.9780))) // 기본 서울 좌표
-                return
-            }
-
-            // LatLngBounds에 좌표 추가
+            val allLocations = black + wednesday + line
             allLocations.forEach { location ->
-                boundsBuilder.include(LatLng(location.latitude, location.longitude))
+                boundsBuilder.include(location.latLng)
             }
-
-            // LatLngBounds로 카메라 이동
             val bounds = boundsBuilder.build()
             moveCamera(CameraUpdate.fitBounds(bounds, 100))
         }
     }
-
-    fun addMarkers(filter: TvShow?) {
+    fun addMarkers(filter: String?) {
         clearMarkers()
-        val filteredLocations = if (filter == null) {
-            _locations.value ?: emptyList()
-        } else {
-            _locations.value?.filter { it.category == filter } ?: emptyList()
+        val filteredLocations = when (filter) {
+            "흑백요리사" -> black
+            "수요미식회" -> wednesday
+            "줄서는식당" -> line
+            else -> black + wednesday + line
         }
-
         naverMap?.let { map ->
             filteredLocations.forEach { location ->
                 val marker = Marker().apply {
-                    position = LatLng(location.latitude, location.longitude)
+                    position = location.latLng
                     this.map = map
-                    captionText = location.name
+                    captionText = location.caption
                     captionTextSize = 16f
                     isHideCollidedCaptions = false
-                    iconTintColor = when (location.category) {
-                        TvShow.BLACKWHITE -> 0xFF8B00FF.toInt()
-                        TvShow.WEDNESDAY -> 0xFF1E90FF.toInt()
-                        TvShow.LINEUP -> 0xFF32CD32.toInt()
+                    iconTintColor = when (location) {
+                        in black -> 0xFF8B00FF.toInt()
+                        in wednesday -> 0xFF1E90FF.toInt()
+                        in line -> 0xFF32CD32.toInt()
+                        else -> Color.WHITE
                     }
                 }
                 markers.add(marker)
             }
         }
     }
-
     private fun clearMarkers() {
         markers.forEach { it.map = null }
         markers.clear()
     }
-
-    fun filterMarkers(category: TvShow?) {
+    fun filterMarkers(category: String?) {
         _filterState.value = category
         addMarkers(category)
     }
+    data class LocationData(
+        val latLng: LatLng,
+        val caption: String
+    )
 }
