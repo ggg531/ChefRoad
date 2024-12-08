@@ -10,7 +10,7 @@ data class Restaurant(
     val menuItems: List<MenuItem>,
     var reviews: List<Review>,
     val imageResId: String?,
-    val allergyIcons: List<Int>,
+    val allergyIcons: List<String>,
     val waitTime: String?,
     val tvShow: String?,
     val distance: Double,

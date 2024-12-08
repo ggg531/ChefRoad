@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.sp
 import com.example.chefroad.R
 import com.example.chefroad.feature.restaurant.data.model.MenuItem
 import com.example.chefroad.feature.restaurant.data.model.Review
-import com.example.chefroad.feature.restaurant.data.model.Restaurant
+//import com.example.chefroad.feature.restaurant.data.model.Restaurant
 import androidx.compose.ui.platform.LocalContext
 import com.example.chefroad.util.getDrawableResId
 import com.example.chefroad.util.getImageResourceId

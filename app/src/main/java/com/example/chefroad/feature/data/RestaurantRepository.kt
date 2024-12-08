@@ -7,7 +7,7 @@ import com.example.chefroad.R
 import com.example.chefroad.feature.data.model.LocationMap
 import com.example.chefroad.feature.data.model.ResFilter
 import com.example.chefroad.feature.data.model.TvShow
-import com.example.chefroad.feature.restaurant.data.model.Restaurant // 올바른 경로로 수정
+//import com.example.chefroad.feature.restaurant.data.model.Restaurant // 올바른 경로로 수정
 import java.io.InputStream
 import java.io.InputStreamReader
 
@@ -19,6 +19,7 @@ fun mapAllergyIcons(context: Context, allergyIcons: List<String>): List<Int> {
     }
 }
 
+/*
 fun loadRestaurants(context: Context): List<Restaurant> {
     val inputStream: InputStream = context.resources.openRawResource(R.raw.restaurants)
     val reader = InputStreamReader(inputStream)
@@ -31,6 +32,10 @@ fun loadRestaurants(context: Context): List<Restaurant> {
         )
     }
 }
+
+ */
+
+
 
 fun loadLocationMaps(context: Context): List<LocationMap> {
     val inputStream: InputStream = context.resources.openRawResource(R.raw.restaurants)
