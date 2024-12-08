@@ -18,17 +18,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.List
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Divider
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,7 +43,10 @@ import com.example.chefroad.ui.theme.Purple1
 import com.example.chefroad.ui.theme.Purple2
 
 @Composable
-fun FilterScreen(navController: NavController, viewModel: FilterViewModel = viewModel()) {
+fun FilterScreen(
+    navController: NavController,
+    viewModel: FilterViewModel = viewModel()
+) {
     var isFilterVisible by remember { mutableStateOf(false) }
 
     Box(
@@ -56,7 +54,7 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
-        RestaurantScreen(navController)
+        //RestaurantScreen(navControlle)
 
         IconButton(
             onClick = { isFilterVisible = !isFilterVisible },
@@ -111,7 +109,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                     .padding(bottom = 16.dp)
             ) {
                 Icon(
-                    imageVector = Icons.Default.ArrowBack,
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "cancel",
                     modifier = Modifier
                         .align(Alignment.CenterStart)
@@ -125,7 +123,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
                     modifier = Modifier.align(Alignment.Center)
                 )
             }
-            Divider(color = DarkGray, thickness = 1.dp)
+            HorizontalDivider(color = DarkGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
 
             Text(text = "음식 종류", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
@@ -171,7 +169,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             }
 
             Spacer(modifier = Modifier.height(12.dp))
-            Divider(color = Color.LightGray, thickness = 1.dp)
+            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "식당 유형", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
@@ -211,7 +209,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             }
 
             Spacer(modifier = Modifier.height(12.dp))
-            Divider(color = Color.LightGray, thickness = 1.dp)
+            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "금액 (메인 메뉴 기준)", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
@@ -256,7 +254,7 @@ fun FilterContent(onApply: () -> Unit, onCancel: () -> Unit, onReset: () -> Unit
             }
 
             Spacer(modifier = Modifier.height(12.dp))
-            Divider(color = Color.LightGray, thickness = 1.dp)
+            HorizontalDivider(color = Color.LightGray, thickness = 1.dp)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "알레르기", style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold))
             Spacer(modifier = Modifier.height(8.dp))
