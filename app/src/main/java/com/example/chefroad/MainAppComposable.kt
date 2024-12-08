@@ -80,7 +80,7 @@ fun MainApp() {
                 }
                 composable("restaurants/{tvShow}") { backStackEntry ->
                     val tvShow = backStackEntry.arguments?.getString("tvShow") ?: "BLACKWHITE"
-                    restaurant_list(navController = navController, selectedTvShow = tvShow)
+                    RestaurantScreen(navController = navController, selectedTvShow = tvShow)
                 }
 
                 composable("myreview/{id}") { backStackEntry ->

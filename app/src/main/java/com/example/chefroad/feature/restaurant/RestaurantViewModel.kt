@@ -22,6 +22,7 @@ import android.util.Log
 import com.example.chefroad.feature.model.Restaurant
 import com.example.chefroad.feature.utils.loadRestaurantsFromJson
 import com.google.firebase.firestore.SetOptions
+import com.google.gson.JsonSyntaxException
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
@@ -51,12 +52,15 @@ class RestaurantViewModel @Inject constructor(
 
     fun loadRestaurants(context: Context) {
         viewModelScope.launch {
-            Log.d("RestaurantViewModel", "Loading restaurants from JSON...")
-            _restaurants.value = loadRestaurantsFromJson(context)
-            Log.d("RestaurantViewModel", "Restaurants loaded: ${_restaurants.value}")
-            //updateFavoriteRestaurants()
+            try {
+                _restaurants.value = loadRestaurantsFromJson(context)
+                Log.d("loadRestaurants", "Successfully loaded restaurants: ${_restaurants.value}")
+            } catch (e: JsonSyntaxException) {
+                Log.e("loadRestaurants", "JSON parsing error", e)
+            }
         }
     }
+
 
 
     private fun observeRestaurantUpdates() {
@@ -172,8 +176,9 @@ class RestaurantViewModel @Inject constructor(
 
     // TV 프로그램 이름으로 레스토랑 필터링
     fun filterRestaurantsByShow(tvShow: String): List<Restaurant> {
-        return _restaurants.value.filter { it.tvShow == tvShow }
+        return _restaurants.value.filter { it.tvShow.equals(tvShow, ignoreCase = true) }
     }
+
 }
 
 
