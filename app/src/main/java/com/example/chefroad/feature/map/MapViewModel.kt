@@ -1,5 +1,6 @@
 package com.example.chefroad.feature.map
 
+import android.content.Context
 import android.graphics.Color
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,10 +9,15 @@ import com.naver.maps.geometry.LatLng
 import com.naver.maps.geometry.LatLngBounds
 import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.NaverMap
+import com.naver.maps.map.overlay.InfoWindow
 import com.naver.maps.map.overlay.Marker
 
 class MapViewModel : ViewModel() {
     private var naverMap: NaverMap? = null
+    private lateinit var context: Context
+    private var currentInfoWindow: InfoWindow? = null
+    private val infoWindows = mutableListOf<InfoWindow>()
+    private val markers = mutableListOf<Marker>()
     private val black = listOf(
         LocationData(LatLng(37.512345, 127.056789), "트리드"),
         LocationData(LatLng(37.566789, 127.00012), "디핀"),
@@ -78,11 +84,12 @@ class MapViewModel : ViewModel() {
         LocationData(LatLng(37.520000, 127.030000), "카페 온"),
         LocationData(LatLng(37.590000, 126.940000), "철든김밥")
     )
-    private val markers = mutableListOf<Marker>()
     private val _filterState = MutableLiveData<String?>()
     val filterState: LiveData<String?> = _filterState
-    fun initializeMap(map: NaverMap) {
+
+    fun initializeMap(map: NaverMap, context: Context) {
         naverMap = map
+        this.context = context
         setupMapSettings()
         addMarkers(null)
     }
@@ -107,13 +114,13 @@ class MapViewModel : ViewModel() {
             else -> black + wednesday + line
         }
         naverMap?.let { map ->
-            filteredLocations.forEach { location ->
+            filteredLocations.forEachIndexed { index, location ->
                 val marker = Marker().apply {
                     position = location.latLng
                     this.map = map
                     captionText = location.caption
-                    captionTextSize = 16f
-                    isHideCollidedCaptions = false
+                    captionTextSize = 17f
+                    isHideCollidedCaptions = true // 일부 가게명만 보임
                     iconTintColor = when (location) {
                         in black -> 0xFF8B00FF.toInt()
                         in wednesday -> 0xFF1E90FF.toInt()
@@ -121,13 +128,49 @@ class MapViewModel : ViewModel() {
                         else -> Color.WHITE
                     }
                 }
+                val infoWindow = InfoWindow().apply {
+                    adapter = object : InfoWindow.DefaultTextAdapter(context) {
+                        override fun getText(infoWindow: InfoWindow): CharSequence {
+                            return location.caption
+                        }
+                    }
+                }
                 markers.add(marker)
+                infoWindows.add(infoWindow)
+
+                marker.setOnClickListener {
+                    if (infoWindow.map != null) {
+                        infoWindow.close()
+                        currentInfoWindow = null
+                    } else {
+                        currentInfoWindow?.close()
+                        currentInfoWindow = infoWindow
+                        infoWindow.open(marker)
+                    }
+                    true
+                }
             }
         }
     }
+
+    private fun getClickHandler(index: Int): () -> Unit {
+        return {
+            val infoWindow = infoWindows[index]
+            val marker = markers[index]
+            if (infoWindow.map != null) {
+                infoWindow.close()
+            } else {
+                infoWindow.open(marker)
+            }
+        }
+    }
+
     private fun clearMarkers() {
         markers.forEach { it.map = null }
         markers.clear()
+        infoWindows.forEach { it.close() }
+        infoWindows.clear()
+        currentInfoWindow = null
     }
     fun filterMarkers(category: String?) {
         _filterState.value = category
