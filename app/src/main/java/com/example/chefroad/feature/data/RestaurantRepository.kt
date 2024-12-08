@@ -5,6 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.example.chefroad.R
 import com.example.chefroad.feature.data.model.LocationMap
+import com.example.chefroad.feature.data.model.ResFilter
 import com.example.chefroad.feature.data.model.TvShow
 import com.example.chefroad.feature.restaurant.data.model.Restaurant // 올바른 경로로 수정
 import java.io.InputStream
@@ -51,5 +52,18 @@ private fun determineTvShowCategory(id: Int): TvShow {
         in 21..40 -> TvShow.WEDNESDAY
         in 41..60 -> TvShow.LINEUP
         else -> throw IllegalArgumentException("Unknown TvShow category for ID: $id")
+    }
+}
+
+fun loadResFilters(context: Context): List<ResFilter> {
+    val inputStream: InputStream = context.resources.openRawResource(R.raw.restaurants)
+    val reader = InputStreamReader(inputStream)
+    val type = object : TypeToken<List<ResFilter>>() {}.type
+    val resFilters = Gson().fromJson<List<ResFilter>>(reader, type)
+
+    return resFilters.map { resFilter ->
+        resFilter.copy(
+            //
+        )
     }
 }

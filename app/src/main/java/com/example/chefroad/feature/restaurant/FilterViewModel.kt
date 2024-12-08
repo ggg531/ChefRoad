@@ -22,16 +22,12 @@ class FilterViewModel @Inject constructor() : ViewModel() {
         _currentFilters.value = FilterState()
     }
 
-    /* 식당 페이지에 필터 적용
-    fun updateresTypeType(type: String?) {
-        _currentFilters.value = _currentFilters.value.copy(cuisineType = type)
+    fun updateFilters(foodType: String? = null, resType: String? = null, moneyRange: Int? = null, allergyType: String? = null) {
+        _currentFilters.value = _currentFilters.value.copy(
+            foodType = foodType ?: _currentFilters.value.foodType,
+            resType = resType ?: _currentFilters.value.resType,
+            moneyRange = moneyRange ?: _currentFilters.value.moneyRange,
+            allergyType = allergyType ?: _currentFilters.value.allergyType
+        )
     }
-
-    fun updatePriceRange(range: String?) {
-       _currentFilters.value = _currentFilters.value.copy(priceRange = range)
-    }
-
-    fun updatemoneyRange(rating: Int) {
-        _currentFilters.value = _currentFilters.value.copy(rating = rating)
-    } */
 }
