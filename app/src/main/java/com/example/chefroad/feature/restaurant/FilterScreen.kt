@@ -59,7 +59,7 @@ fun FilterScreen(
             .fillMaxSize()
             .padding(top = 32.dp, start = 8.dp, end = 8.dp, bottom = 16.dp)
     ) {
-        //RestaurantScreen(navController,)
+        //RestaurantScreen(navControlle)
 
         IconButton(
             onClick = { isFilterVisible = !isFilterVisible },
