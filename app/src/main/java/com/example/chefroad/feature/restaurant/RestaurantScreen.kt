@@ -66,6 +66,25 @@ fun RestaurantScreen(
     selectedTvShow: String,
     restaurantViewModel: RestaurantViewModel = hiltViewModel()
 ) {
+
+
+    val filteredIds = navController.currentBackStackEntry
+        ?.savedStateHandle
+        ?.get<List<Int>>("filteredIds") // SavedStateHandle에서 id 데이터 가져오기
+
+    Column(
+        modifier = Modifier.fillMaxSize().padding(16.dp)
+    ) {
+        Text(text = "Filtered Restaurant IDs:", style = MaterialTheme.typography.headlineMedium)
+        if (filteredIds.isNullOrEmpty()) {
+            Text(text = "No matching restaurants found.")
+        } else {
+            filteredIds.forEach { id ->
+                Text(text = "Restaurant ID: $id")
+            }
+        }
+    }
+
     var searchText by remember { mutableStateOf("") }
     var selectedSortOption by remember { mutableStateOf("가까운 순") }
     var expanded by remember { mutableStateOf(false) }
@@ -158,7 +177,6 @@ fun RestaurantScreen(
 @Composable
 fun RestaurantItem(restaurant: Restaurant, viewModel: RestaurantViewModel, onClick: () -> Unit) {
     val isFavorite = viewModel.isFavorite(restaurant)
-
     Row(
         modifier = Modifier
             .fillMaxWidth()

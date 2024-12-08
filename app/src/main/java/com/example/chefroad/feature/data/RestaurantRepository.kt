@@ -5,7 +5,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.example.chefroad.R
 import com.example.chefroad.feature.data.model.TvShow
-import com.example.chefroad.feature.restaurant.data.model.Restaurant // 올바른 경로로 수정
+//import com.example.chefroad.feature.restaurant.data.model.Restaurant // 올바른 경로로 수정
 import java.io.InputStream
 import java.io.InputStreamReader
 
@@ -16,7 +16,7 @@ fun mapAllergyIcons(context: Context, allergyIcons: List<String>): List<Int> {
         if (resId != 0) resId else null
     }
 }
-
+/*
 fun loadRestaurants(context: Context): List<Restaurant> {
     val inputStream: InputStream = context.resources.openRawResource(R.raw.restaurants)
     val reader = InputStreamReader(inputStream)
@@ -28,4 +28,4 @@ fun loadRestaurants(context: Context): List<Restaurant> {
             allergyIcons = mapAllergyIcons(context, restaurant.allergyIcons as List<String>)
         )
     }
-}
+} */

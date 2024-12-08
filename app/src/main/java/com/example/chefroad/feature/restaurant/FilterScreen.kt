@@ -58,13 +58,16 @@ fun FilterScreen(navController: NavController, viewModel: FilterViewModel = view
                 .padding(bottom = 16.dp),
             verticalArrangement = Arrangement.SpaceBetween
         ) {
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.weight(1f))
             FilterContent(
                 onApply = {
-                    navController.previousBackStackEntry?.savedStateHandle?.set("filters", viewModel.currentFilters.value)
+                    navController.previousBackStackEntry?.savedStateHandle?.set(
+                        "filters",
+                        viewModel.currentFilters.value
+                    )
                 },
-                onCancel = { navController.navigate("restaurants/{tvShow}") },
-                onReset = { viewModel.resetFilters() }
+                onCancel = { navController.popBackStack() },
+                onReset = { viewModel.resetFilters() },
             )
         }
     }

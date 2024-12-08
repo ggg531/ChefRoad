@@ -2,39 +2,36 @@ package com.example.chefroad.feature.restaurant
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
 data class FilterState(
-    val foodType: String? = null,
-    val resType: String? = null,
-    val moneyRange: Int? = null,
-    val allergyType: String? = null,
+    val selectedFoodType: String? = null,
+    val selectedResType: String? = null,
+    val selectedPriceRange: Int? = null,
+    val selectedAllergyType: List<String>? = null
 )
 
-@HiltViewModel
-class FilterViewModel @Inject constructor() : ViewModel() {
-    private val _currentFilters = mutableStateOf(FilterState())
-    val currentFilters: State<FilterState> = _currentFilters
+class FilterViewModel : ViewModel() {
+    private val _currentFilters = MutableLiveData(FilterState())
+    val currentFilters: LiveData<FilterState> = _currentFilters
+
+    fun updateFilters(
+        foodType: String? = null,
+        resType: String? = null,
+        priceRange: Int? = null,
+        allergyType: List<String>? = null
+    ) {
+        _currentFilters.value = FilterState(
+            selectedFoodType = foodType,
+            selectedResType = resType,
+            selectedPriceRange = priceRange,
+            selectedAllergyType = allergyType
+        )
+    }
 
     fun resetFilters() {
         _currentFilters.value = FilterState()
-    }
-
-    fun updateFoodType(type: String?) {
-        _currentFilters.value = _currentFilters.value.copy(foodType = type)
-    }
-
-    fun updateResType(type: String?) {
-        _currentFilters.value = _currentFilters.value.copy(resType = type)
-    }
-
-    fun updateMoneyRange(range: Int?) {
-        _currentFilters.value = _currentFilters.value.copy(moneyRange = range)
-    }
-
-    fun updateAllergyType(type: String?) {
-        _currentFilters.value = _currentFilters.value.copy(allergyType = type)
     }
 }

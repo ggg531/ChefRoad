@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -64,8 +65,8 @@ fun MainApp() {
                     val tvShow = backStackEntry.arguments?.getString("tvShow") ?: "BLACKWHITE"
                     restaurant_list(navController = navController, selectedTvShow = tvShow)
                 }
-
                 composable("filter") {
+                    val context = LocalContext.current
                     FilterScreen(navController = navController)
                 }
                 composable(route = "map") {
