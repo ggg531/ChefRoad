@@ -78,7 +78,10 @@ fun mypage_main(
                             .align(Alignment.Center)
                     )
                     IconButton(
-                        onClick = { Firebase.auth.signOut() },
+                        onClick = {
+                            Firebase.auth.signOut()
+                            navController.navigate("signin" )
+                        },
                         modifier = Modifier.align(Alignment.CenterEnd)
                     ) {
                         Icon(
@@ -152,94 +155,6 @@ fun mypage_main(
             }
         }
     )
-/*
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.SpaceBetween
-    ) {
-        Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "마이 페이지",
-                color = Color.Black,
-                modifier = Modifier.weight(1f),
-                textAlign = TextAlign.Center
-            )
-            IconButton(onClick = { Firebase.auth.signOut() }) {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ExitToApp,
-                    contentDescription = "logout",
-                    modifier = Modifier
-                        //.align(Alignment.TopEnd)
-                        .size(24.dp)
-                )
-            }
-        }
-
-
-        Row {
-            Image(painter = painterResource(id = R.drawable.user_mypage), contentDescription = "user_main")
-            Text(
-                text = "$mypagename 님, \n안녕하세요.",
-                fontSize = 20.sp,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                color = Color.Black
-            )
-        }
-
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            ElevatedButton(
-                onClick = { navController.navigate("myfavorite/$currentUserId")},
-                modifier = Modifier.fillMaxWidth(0.4f).height(50.dp),
-                elevation = ButtonDefaults.elevatedButtonElevation(8.dp)
-            ) {
-                Text("즐겨찾기")
-            }
-            ElevatedButton(
-                onClick = { navController.navigate("myreview/$currentUserId") },
-                modifier = Modifier.fillMaxWidth(0.8f).height(50.dp),
-                elevation = ButtonDefaults.elevatedButtonElevation(4.dp)
-            ) {
-                Text("리뷰")
-            }
-        }
-
-        /*
-        // 식당 목록으로 이동 버튼
-        BottomAppBar {
-            Row(
-                modifier = Modifier.padding(8.dp)
-            ) {
-                // 식당페이지 이동 버튼
-                IconButton(
-                    onClick = { navController.navigate("HOME") },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Image(painter = painterResource(id = R.drawable.restaurant), contentDescription = "restbutton")
-                }
-                // 마이페이지 이동 버튼
-                IconButton(
-                    onClick = { navController.navigate("mypage") },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Image(painter = painterResource(id = R.drawable.user_bottom), contentDescription = "mypagebutton")
-                }
-            }
-        }*/
-    }
-
- */
 }
 
 
