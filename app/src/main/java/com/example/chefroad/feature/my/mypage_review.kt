@@ -16,17 +16,19 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -37,22 +39,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.chefroad.R
 import com.example.chefroad.feature.restaurant.RestaurantViewModel
 import com.example.chefroad.feature.review.ReviewViewModel
+import com.example.chefroad.ui.theme.Purple2
 import com.google.firebase.auth.FirebaseAuth
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MyReviewScreen (
@@ -65,41 +63,28 @@ fun MyReviewScreen (
     val user = auth.currentUser
     val currentUserId = user?.uid // 현재 사용자 ID
 
-    //val restaurants by restaurantViewModel.restaurants.collectAsState(initial = emptyList())
-    //val restaurants = loadRestaurants()
     val reviews by reviewViewModel.reviews.collectAsState()
     val userReviews = reviews.filter { it.id == currentUserId }
     val restaurants by restaurantViewModel.restaurants.collectAsState(initial = emptyList())
 
     Scaffold(
-        topBar = {
-            Column {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    IconButton(onClick = { navController.navigateUp() }) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "back",
-                            tint = Color.Black
-                        )
-                    }
-                    Text(
-                        text = "나의 리뷰",
-                        color = Color.Black,
-                        fontSize = 25.sp,
-                        fontFamily = FontFamily.SansSerif, // SansSerif로 설정
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.weight(1f),
-                        textAlign = TextAlign.Center
-                    )
-                }
-            }
+            topBar = {
+                TopAppBar(
+                    title = { Text("나의 리뷰") },
+                    navigationIcon = {
+                        IconButton(onClick = { navController.navigateUp() }) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = "Back",
+                                tint = Color.Black,
+                                modifier = Modifier
+                                    .size(24.dp)
+                            )
+                        }
 
-        },
+                    }
+                )
+            },
         content = { paddingValues ->
             Column (
                 modifier = Modifier.padding(paddingValues)
@@ -115,9 +100,9 @@ fun MyReviewScreen (
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(8.dp)
-                                .background(Color.Gray.copy(alpha = 0.1f)) // 회색 배경 추가
-                                .padding(8.dp) // 내용과 배경 사이에 여백 추가
-                                .clip(androidx.compose.foundation.shape.RoundedCornerShape(8.dp)) // 둥근 모서리 추가
+                                .background(Color.Gray.copy(alpha = 0.1f))
+                                .padding(8.dp)
+                                .clip(androidx.compose.foundation.shape.RoundedCornerShape(8.dp))
                         ) {
                             Row (
                                 modifier = Modifier.fillMaxWidth(),
@@ -164,8 +149,6 @@ fun MyReviewScreen (
                                     )
                                 }
 
-
-                                // 드롭다운 메뉴
                                 DropdownMenu(
                                     expanded = expanded,
                                     onDismissRequest = { expanded = false },
@@ -182,7 +165,7 @@ fun MyReviewScreen (
                                                         navController.navigate("edit_review/${review.id}/${review.content}") // 수정 화면으로 이동
                                                     }
                                                     "리뷰 삭제하기" -> {
-                                                        reviewViewModel.deleteReview(review.id) // 리뷰 삭제
+                                                        reviewViewModel.deleteReview(review.id)
                                                     }
                                                 }
                                             }
@@ -219,9 +202,9 @@ fun emptyReview(navController: NavHostController) {
             Button(
                 onClick = { navController.navigate("HOME") },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.redpink),
-                    contentColor = Color.White
-                )
+                    containerColor = Purple2,
+                    contentColor = Color.White,
+                ),
             ){
                 Text(text = "식당 보러가기")
             }

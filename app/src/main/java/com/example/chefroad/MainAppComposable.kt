@@ -23,9 +23,7 @@ import com.example.chefroad.feature.auth.signin.SignInScreen
 import com.example.chefroad.feature.auth.signup.SignUpScreen
 import com.example.chefroad.feature.home.HomeScreen
 import com.example.chefroad.feature.map.MapScreen
-import com.example.chefroad.feature.my.MyScreen
 import com.example.chefroad.feature.restaurant.FilterScreen
-import com.example.chefroad.feature.restaurant.RestaurantScreen
 import com.example.chefroad.feature.review.ReviewScreen
 import com.example.chefroad.ui.BottomBar
 import com.example.chefroad.ui.SplashScreen

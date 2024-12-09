@@ -67,7 +67,6 @@ fun RestaurantScreen(
     restaurantViewModel: RestaurantViewModel = hiltViewModel()
 ) {
 
-
     val filteredIds = navController.currentBackStackEntry
         ?.savedStateHandle
         ?.get<List<Int>>("filteredIds") // SavedStateHandle에서 id 데이터 가져오기

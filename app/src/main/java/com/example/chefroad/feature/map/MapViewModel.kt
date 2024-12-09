@@ -120,7 +120,7 @@ class MapViewModel : ViewModel() {
                     this.map = map
                     captionText = location.caption
                     captionTextSize = 16f
-                    isHideCollidedCaptions = true // 일부 가게명만 보임
+                    isHideCollidedCaptions = true
                     iconTintColor = when (location) {
                         in black -> 0xFF8B00FF.toInt()
                         in wednesday -> 0xFF1E90FF.toInt()
@@ -152,7 +152,7 @@ class MapViewModel : ViewModel() {
             }
         }
     }
-
+/*
     private fun getClickHandler(index: Int): () -> Unit {
         return {
             val infoWindow = infoWindows[index]
@@ -164,7 +164,7 @@ class MapViewModel : ViewModel() {
             }
         }
     }
-
+*/
     private fun clearMarkers() {
         markers.forEach { it.map = null }
         markers.clear()

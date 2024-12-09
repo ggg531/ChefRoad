@@ -48,12 +48,18 @@ import com.example.chefroad.R
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.chefroad.feature.model.Restaurant
 import com.example.chefroad.feature.restaurant.RestaurantViewModel
 import com.example.chefroad.feature.utils.loadRestaurantsFromJson
+import com.example.chefroad.ui.theme.DarkGray
+import com.example.chefroad.ui.theme.Purple2
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -73,8 +79,6 @@ fun restaurant_list(
     val favoriteRestaurants by restaurantViewModel.favoriteRestaurants.collectAsState()
     val context = LocalContext.current
 
-
-
     // 식당 데이터 로드
     LaunchedEffect(selectedTvShow) {
         restaurantViewModel.loadRestaurants(context)
@@ -93,32 +97,45 @@ fun restaurant_list(
 
     Scaffold(
         topBar = {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                IconButton(onClick = { navController.navigateUp() }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "back",
-                        tint = Color.Black
+            Column(modifier = Modifier.padding(16.dp)) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    IconButton(
+                        onClick = { navController.navigateUp() },
+                        modifier = Modifier.align(Alignment.CenterVertically)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "back",
+                            tint = Color.Black,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+                    Text(
+                        text = selectedTvShow,
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.headlineMedium,
+                        modifier = Modifier
+                            .weight(1f)
+                            .align(Alignment.CenterVertically)
                     )
+                    IconButton(
+                        onClick = { navController.navigate("filter") },
+                        modifier = Modifier.align(Alignment.CenterVertically)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.List,
+                            contentDescription = "filtering",
+                            tint = Color.Black,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
                 }
-                Text(
-                    text = selectedTvShow,
-                    color = Color.Black,
-                    modifier = Modifier.weight(1f),
-                    textAlign = TextAlign.Center
-                )
-                IconButton(onClick = { navController.navigate("filter") }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.List,
-                        contentDescription = "filtering",
-                        tint = Color.Black
-                    )
-                }
+                Divider(color = DarkGray, thickness = 1.dp)
             }
         },
         content = { paddingValues ->
@@ -127,11 +144,11 @@ fun restaurant_list(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
-                // 검색창과 정렬 버튼
+                // 검색창, 정렬 버튼
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(8.dp),
+                        .padding(horizontal = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     BasicTextField(
@@ -153,7 +170,11 @@ fun restaurant_list(
 
                     Button(
                         onClick = { expanded = !expanded },
-                        modifier = Modifier.padding(start = 8.dp)
+                        shape = RoundedCornerShape(6.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Purple2,
+                            contentColor = Color.White,
+                        ),
                     ) {
                         Text("정렬")
                     }
@@ -189,26 +210,7 @@ fun restaurant_list(
                     }
                 }
             }
-        },
-        /*
-        bottomBar = { BottomAppBar (
-            modifier = Modifier.padding(10.dp).fillMaxWidth()
-        ) {
-            IconButton(
-                onClick = { navController.navigate("home") },
-                modifier = Modifier.weight(1f)
-            ) {
-                Image(painter = painterResource(id = R.drawable.restaurant), contentDescription = "restbutton")
-            }
-            // 마이페이지 이동 버튼
-            IconButton(
-                onClick = { navController.navigate("mypage") },
-                modifier = Modifier.weight(1f)
-            ) {
-                Image(painter = painterResource(id = R.drawable.user_bottom), contentDescription = "mypagebutton")
-            }
         }
-        }*/
     )
 }
 
@@ -226,12 +228,15 @@ fun RestaurantItem(restaurant: Restaurant, viewModel: RestaurantViewModel, onCli
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
+            /*
             Image(
                 painter = painterResource(R.drawable.restaurant),
                 contentDescription = null,
                 modifier = Modifier.size(70.dp)
             )
             Spacer(modifier = Modifier.width(16.dp))
+
+             */
             Column {
                 Text(restaurant.name, fontSize = 20.sp)
                 Text("거리: ${restaurant.distance}km", fontSize = 14.sp)

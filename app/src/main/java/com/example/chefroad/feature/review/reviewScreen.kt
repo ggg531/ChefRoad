@@ -80,14 +80,18 @@ fun ReviewScreen(navController: NavHostController) {
     LaunchedEffect(key1 = Unit) {
         viewModel.getReview()
     }
-
-    Scaffold (
+    Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("$restaurantName 리뷰") },
+                title = { Text("방문자 리뷰")},
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "back",
+                            tint = Color.Black,
+                            modifier = Modifier.size(24.dp)
+                        )
                     }
                 }
             )

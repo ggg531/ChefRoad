@@ -14,8 +14,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavController
 import com.example.chefroad.R
+import com.example.chefroad.ui.theme.Purple1
+import com.example.chefroad.ui.theme.Purple2
+import com.example.chefroad.ui.theme.Purple3
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -26,20 +31,15 @@ fun HomeScreen(navController: NavController) {
         verticalArrangement = Arrangement.SpaceEvenly,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // 흑백요리사 버튼
         TvShowButton("흑백요리사", R.drawable.blackwhite_logo,) {
             navController.navigate("restaurants/BLACKWHITE")
         }
 
-        // 수요미식회버튼
         TvShowButton("수요미식회", R.drawable.wednesday_logo) {
             navController.navigate("restaurants/WEDNESDAY")
         }
 
-        // 줄서는식당 버튼
-        TvShowButton("줄서는식당", R.drawable.lineup_logo) {
+        TvShowButton("줄 서는 식당", R.drawable.lineup_logo) {
             navController.navigate("restaurants/LINEUP")
         }
 
@@ -56,7 +56,10 @@ fun TvShowButton(text: String, imageRes: Int, onClick: () -> Unit) {
             .height(200.dp)
             .padding(vertical = 8.dp),
         shape = RoundedCornerShape(16.dp),
-        colors = ButtonDefaults.buttonColors()
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Purple3,
+            contentColor = Color.White,
+        )
     ) {
         Row(
             modifier = Modifier.fillMaxSize(),
@@ -66,7 +69,9 @@ fun TvShowButton(text: String, imageRes: Int, onClick: () -> Unit) {
             Text(
                 text = text,
                 fontSize = 36.sp,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
             )
             Image(
                 painter = painterResource(id = imageRes),
@@ -79,4 +84,3 @@ fun TvShowButton(text: String, imageRes: Int, onClick: () -> Unit) {
         }
     }
 }
-
