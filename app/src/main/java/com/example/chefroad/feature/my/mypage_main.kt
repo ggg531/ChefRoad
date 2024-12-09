@@ -3,6 +3,7 @@ package com.example.chatapp.feature.mypage
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.ArrowBack
@@ -33,6 +34,7 @@ import com.example.chefroad.feature.restaurant.RestaurantViewModel
 import com.example.chefroad.feature.review.ReviewViewModel
 import com.example.chefroad.ui.theme.DarkGray
 import com.example.chefroad.ui.theme.Purple2
+import com.example.chefroad.ui.theme.Purple3
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -122,9 +124,10 @@ fun mypage_main(
                         Button(
                             onClick = { navController.navigate("myfavorite/$currentUserId") },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Purple2,
+                                containerColor = Purple3,
                                 contentColor = Color.White,
                             ),
+                            shape = RoundedCornerShape(6.dp),
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(horizontal = 8.dp)
@@ -134,9 +137,10 @@ fun mypage_main(
                         Button(
                             onClick = { navController.navigate("myreview/$currentUserId") },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Purple2,
+                                containerColor = Purple3,
                                 contentColor = Color.White,
                             ),
+                            shape = RoundedCornerShape(6.dp),
                             modifier = Modifier
                                 .weight(1f)
                                 .padding(horizontal = 8.dp)
