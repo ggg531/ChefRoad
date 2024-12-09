@@ -199,12 +199,16 @@ fun restaurant_list(
 
                 // 식당 목록
                 LazyColumn(modifier = Modifier.padding(16.dp)) {
-                    items(sortedRestaurants) { restaurant ->
+                    items(filteredRestaurants) { restaurant ->
                         RestaurantItem(
                             restaurant = restaurant,
                             viewModel = restaurantViewModel,
                             onClick = {
-                                navController.navigate("restaurant_detail/${restaurant.id}")
+                                when (restaurant.name) {
+                                    "진진" -> navController.navigate("restaurant_info2/${restaurant.name}")
+                                    "티엔미미 홍대점" -> navController.navigate("restaurant_info1/${restaurant.name}")
+                                    else -> navController.navigate("restaurant_detail/${restaurant.name}")
+                                }
                             }
                         )
                     }

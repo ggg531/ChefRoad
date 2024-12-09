@@ -18,6 +18,8 @@ import com.example.chatapp.feature.mypage.MyFavoriteScreen
 import com.example.chatapp.feature.mypage.MyReviewScreen
 import com.example.chatapp.feature.mypage.mypage_main
 import com.example.chatapp.feature.restaurant.RestaurantDetailScreen
+import com.example.chatapp.feature.restaurant.RestaurantInfo1
+import com.example.chatapp.feature.restaurant.RestaurantInfo2
 import com.example.chatapp.feature.restaurant.restaurant_list
 import com.example.chefroad.feature.auth.signin.SignInScreen
 import com.example.chefroad.feature.auth.signup.SignUpScreen
@@ -74,6 +76,17 @@ fun MainApp() {
                 composable("restaurant_detail/{restaurantName}") { backStackEntry ->
                     val restaurantName = backStackEntry.arguments?.getString("restaurantName") ?: ""
                     RestaurantDetailScreen(navController = navController, restaurantName = restaurantName)
+                }
+
+                composable("restaurant_info1/{restaurantName}") { backStackEntry ->
+                    val restaurantName = backStackEntry.arguments?.getString("restaurantName") ?: ""
+                    RestaurantInfo1(navController = navController, restaurantName = restaurantName)
+                }
+
+
+                composable("restaurant_info2/{restaurantName}") { backStackEntry ->
+                    val restaurantName = backStackEntry.arguments?.getString("restaurantName") ?: ""
+                    RestaurantInfo2(navController = navController, restaurantName = restaurantName)
                 }
 
                 composable("myreview/{id}") { backStackEntry ->
