@@ -228,18 +228,9 @@ fun RestaurantItem(restaurant: Restaurant, viewModel: RestaurantViewModel, onCli
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            /*
-            Image(
-                painter = painterResource(R.drawable.restaurant),
-                contentDescription = null,
-                modifier = Modifier.size(70.dp)
-            )
-            Spacer(modifier = Modifier.width(16.dp))
-
-             */
             Column {
                 Text(restaurant.name, fontSize = 20.sp)
-                Text("거리: ${restaurant.distance}km", fontSize = 14.sp)
+                Text("거리: ${restaurant.distance}km, 알레르기 성분: ${restaurant.allergies}", fontSize = 14.sp)
             }
         }
         IconButton(onClick = {
