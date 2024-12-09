@@ -148,7 +148,7 @@ fun mypage_main(
                                 .weight(1f)
                                 .padding(horizontal = 8.dp)
                         ) {
-                            Text("리뷰")
+                            Text("내가 쓴 리뷰")
                         }
                     }
                 }
