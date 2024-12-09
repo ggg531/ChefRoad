@@ -1,5 +1,7 @@
 package com.example.chefroad.feature.model
 
+import com.example.chefroad.feature.restaurant.data.model.Review
+
 data class Restaurant(
     val id: Int,
     val name: String,

@@ -214,8 +214,3 @@ fun RestaurantItem(restaurant: Restaurant, viewModel: RestaurantViewModel, onCli
         }
     }
 }
-
-
-
-
-

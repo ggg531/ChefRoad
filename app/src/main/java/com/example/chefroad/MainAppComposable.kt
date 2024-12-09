@@ -72,9 +72,6 @@ fun MainApp() {
                 composable(route = "map") {
                     MapScreen()
                 }
-                composable(route = "my") {
-                    MyScreen(navController = navController)
-                }
                 //추가
                 composable("restaurant_detail/{restaurantName}") { backStackEntry ->
                     val restaurantName = backStackEntry.arguments?.getString("restaurantName") ?: ""
@@ -99,7 +96,7 @@ fun MainApp() {
                         MyFavoriteScreen(id = id, navController = navController)
                     }
                 }
-                composable(route = "mypage") {
+                composable(route = "my") {
                     mypage_main(navController = navController)
                 }
                 composable(route = "myreview") {

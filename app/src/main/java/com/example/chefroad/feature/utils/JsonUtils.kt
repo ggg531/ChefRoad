@@ -14,4 +14,3 @@ fun loadRestaurantsFromJson(context: Context): List<Restaurant> {
     return restaurantResponse.restaurants
 }
 
-
